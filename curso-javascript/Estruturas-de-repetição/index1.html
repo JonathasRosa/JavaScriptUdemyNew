@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script1.js"></script>
+    <title>Estrutura de repetição</title>
+</head>
+<body>
+    <h1>Estruturas de controle</h1>
+    <p>A idéia é repetir uma ação até atingir uma determinada condição, ao invés de repetirmos o mesmo código várias vezes, criamos um statement que fará uma checagem em cada <strong>LOOP</strong>.</p>
+    <p>A estrutura de repetição também é chamada de loop.</p>
+    <h2>While</h2>
+    <p>While fará uma ação, até que a condição seja atinginda.</p>
+    <P>Precisamos realmente "definir um fim" para o loop, para não termos o prolema de loop infinito, causando assim o travamento da página.</P>
+    <p>
+      <strong> let x = 10 <br><br>
+
+        while(x > 0) { <br>
+            console.log(x);<br>
+            x = x -1;<br>
+        } </strong>
+    </p>
+    <h2>Do while</h2>
+    <p>Semelhante ao While, porém a estrutura muda um pouco e quase não é utilizado.</p>
+    <p>
+       <strong> let y = 0;<br><br>
+        do {<br>
+            console.log(y);<br>
+            y = y + 1;<br>
+        } while( y < 5); </strong>
+    </p>
+     <h1> For</h1>
+     <p>Semelhante ao While, porém amplamente utilizado sendo a estrutura de repetição mais fácil de compreender, sendo assim dê preferencia pelo <strong>For</strong>.</p>
+     <p>
+      <strong>  for (let numero = 2; numero < 100; numero = numero * 2) {<br>
+            console.log("O numero é: " + numero) <br>
+        } </strong>
+     </p>
+</body>
+</html>

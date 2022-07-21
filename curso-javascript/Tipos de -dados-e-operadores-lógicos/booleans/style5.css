@@ -1,0 +1,22 @@
+  body {
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  table {
+      width: 400px;
+      height: 200px;
+      border-collapse: collapse;
+  }
+
+  td {
+      border: 1px solid black;
+      padding: 2px;
+      text-align: center;
+      /*alinhamento horizontal*/
+      vertical-align: middle;
+      /* alinhamento vertical*/
+  }
+
+  .numero {
+      text-align: right;
+  }

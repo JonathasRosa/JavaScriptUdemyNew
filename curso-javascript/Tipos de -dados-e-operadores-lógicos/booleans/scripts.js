@@ -1,0 +1,42 @@
+console.log(5 > 9)
+console.log(3 > 19)
+console.log(3 < 19)
+console.log(9 < 19)
+
+console.log(typeof (5 > 9))
+console.log(typeof (3 > 19))
+console.log(typeof(3 < 19))
+console.log(typeof (9 < 19))
+
+//Booleans de comparação
+
+console.log(1 > 2)
+console.log(5 < 10)
+console.log(3 >= 3)
+console.log(5 <= 4)
+console.log(5 == 4)
+console.log('Jonathas' != 'Jonathas')
+console.log(3 === '3')
+console.log(4 === 4)
+
+console.log(true && true)
+console.log(false && false)
+console.log(true && false)
+console.log(false && true)
+console.log(true || true)
+console.log(false || false)
+console.log(true || false)
+console.log(false || true)
+console.log(!true)
+console.log(!false)
+
+console.log(5 > 3 && 3 == 2)
+console.log(5 > 3 || 3 == 1)
+console.log(3 == 3 && "Jonathas" == "Jonathas")
+console.log("Jonathas" == "João" || true)
+console.log(!(!(true && true))) 
+
+console.log(5 > 2 ? 'É sim.' : 'É não.')
+console.log(5 < 2 ? 'É sim.' : "É não.")
+console.log(false ? 5 : 4)
+console.log( "Jonathas" == "Jonathas" ? "Olá, Jonathas!" : "Não é o Jonathas!")

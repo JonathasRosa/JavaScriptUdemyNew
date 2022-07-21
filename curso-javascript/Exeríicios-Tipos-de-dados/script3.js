@@ -1,0 +1,6 @@
+console.log(5 > 6)
+console.log(5 < 7)
+console.log(9 <= 10)
+console.log(7 >= 9)
+console.log(8 != 9)
+console.log("Matheus" != "Matues")
