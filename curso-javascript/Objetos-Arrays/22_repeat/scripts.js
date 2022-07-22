@@ -1,3 +1,3 @@
-let palavra = "Repetir a frase ";
+let palavra = "Repetir,";
 
-console.log(palavra.repeat(2));
+console.log(palavra.repeat(9));
