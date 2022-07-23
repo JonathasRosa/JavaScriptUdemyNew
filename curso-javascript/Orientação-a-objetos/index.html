@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
     <title>Orientação a Objetos</title>
 </head>
 <body>
-    
+    <h1>O que é orientação a objetos.</h1>
+    <p>É uma forma de programar, que utiliza os objetos como seu principal princípio, além de utilizar conceitos e técnicas que envolvem objetos.</p>
+    <p>A maioria dos softwares, na parte de back-end, são desenvolvidos em cima desse paradigma.</p>
+    <p>Grandes frameworks se aproveitam desta técnica: Laravel, Django etc.</p>
+    <h2>Métodos</h2>
+    <p>Propriedades que servem como funções, ou seja, as ações dos objetos</p>
+    <p>Chamamos os memtodos da mesma forma que as funções</p>
+    <p>EX: <br>
+        let cachorro = { <br>
+            latir: function(){<br>
+                console.log(" Au AU"); <br>
+            } <br>
+        } <br>
+        cachorro.latir(); <br>
+    </p>
+    <p>Normamente os métodos interagem com os objetos, até mudando os valores das suas propriedades para corresponder a lógica do programa desenvolvido.</p>
+    <p> EX: <br>
+        let pessoa = { <br>
+            nome: '',<br>
+            setNome; fuction(novoNome) { <br>
+                this.nome = novoNome; <br>
+            }, <br>
+             getNome: function() {  <br>
+               return this.nome; <br>
+            } <br>
+        } <br>
+        pessoa.setNome("Jonathas"); <br>
+        console.log(pessoa.getNome()); <br>
+    </p>
+    <h2>Prototypes</h2>
+    <p>É um objeto fallback de outro objeto.</p>
+    <p>Quando um bjeto recebe uma requisição de uma peopriedade que não tem, ela é procurada no prototype deste objeto.</p>
+    <p>O prototype de um objeto criado do zero é o Objeto, que tem os metodos nativos da linguagem.</p>
+    <p>EX: <br>
+        let pessoa = { <br>
+            maos: 2 <br>
+        } <br><br>
+        console.log(Object.getPrototypeOf(pessoa)); <br>
+        console.log(Object.getPrototypeOf(pessoa) == Object.prototype); <br>
+    </p>
+    <p>Quando criamos um objeto a partir de um outro, o base será o prototype.</p>
+    <p>Ele herdará tanto os métodos e propriedades do aobject(o prototype do
+    objeto base).</p>
+    <p>EX: <br>
+        let pessoa = { <br>
+            maos: 2 <br>
+        } <br>
+        let pessoaNova = Object.create(pessoa); <br><br>
+
+        console.log(pessoaNova.maos); <br>
+        console.log(Object.getPrototypeOf(pessoaNova) == pessoa);<br>
+    </p>
+    <h2>Classe</h2>
+    <p>O prototype do JavaScript pode ser chamado de classe.</p>
+    <p>POis nas outras linguagens uma Classe é um molde de um objeto, ou seja, podemos criar diversos objetos em cima de u prototype.</p>
+    <p>EX: <br>
+        let cachorro = { <br>
+            raça: 'SDR', <br>
+        } <br><br>
+
+        let pastorAlemão = Object.create(cachorro);<br>
+        pastorAlemão.raça = 'Pastor Alemão';<br>
+        console.log(pastorAlemão.raça);<br>
+    </p>
+    <h3>Classe: constructor por função</h3>
+    <p>Construtores são formas de instanciar uma classe em uma linguagem de programação, instanciar = crias um objeto novo e já podemos definir propriedades.</p>
+    <p>EX: <br>
+        function criarCachorro(raça) { <br>
+            let cachorro = Object.create({}); <br>
+            cachorro.raça = raça <br>
+            return cachorro; <br>
+        } <br> <br>
+        let doberman = criarCachorro('Doberman'); <br>
+        console.log(doberman.raça); <br>
+    </p>
 </body>
 </html>
