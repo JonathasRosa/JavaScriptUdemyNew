@@ -92,5 +92,65 @@
         let husky = new Cachorro('husky');<br>
         console.log('husky.raça')
     </p>
+    <h3>Constructor com método</h3>
+    <p>Basta definir ao prototype o método desejado.</p>
+    <p>EX: <br>
+        function Cachorro(raça) { <br>
+            this.raça = raça; <br>
+        } <br>
+        cachorro.prptptype.uivar = function () { <br>
+            console.log('Auuuuuuuuuuuuu!!!!!'); <br>
+        } <br>
+        let pug = new Cachorro('Pug'); <br> <br>
+        console.log(pug.raça); <br>
+        pug.uivar();<br>
+    </p>
+    <h3>Constructor na classe (ES6)</h3>
+    <p>Com a versão ES6, uma possibilidade de criar uma classe(objeto) com constructor, assim não precisamos mais crir por meio de uma função.</p>
+    <p>EX: <br>
+        class Cachorro { <br>
+            constructor(raça){ <br>
+                this.raça = raça <br>
+            } <br>
+        } <br> <br>
+        let labrador = new Cachorro('Labrador'); <br>
+        console.log(labrador.raça); <br>
+    </p>
+    <h3>Override nas propriedades do prototype</h3>
+    <p>Sempre que adicionamos uma propriedade a um objeto, é criadda uma idêntica no prototype, podendo assim ser substituido.</p>
+    <p>EX: <br>
+        class Cachorro { <br>
+            constructor(raça){ <br>
+                this.raça = raça <br>
+            } <br>
+        } <br> <br>
+        let poodle = ner Cachorro('Poodle'); <br>
+        Cachorro.prototype.raça = 'SRD' <br>
+        console.log(poodle.raça) <br>
+    </p>
+    <p>Não podemo adicionar propriedades na classe, só via prototype, sendo assim a clase só aceita metodos.</p>
+    <p>EX: <br>
+        class Cachorro { <br>
+            constructor(raça) { <br>
+                this.raça = raça; <br>
+            } <br>
+            latir(){ <br>
+                console.log('Au AU'); <br>
+            } <br>
+        } <br>
+        Cachorro.prototype.patas = 4 <br>
+    </p>
+    <h3>Symbols</h3>
+    <p>São propriedades unicas, que não podem ser alteradas e nem criadas duas vezes, mas podemos utilizar como uma constante, só que para propriedade de objeto.</p>
+    <p>EX: <br>
+        class Cachorro{ <br>
+            constructor(raça) { <br>
+                this.raça = raça <br>
+            } <br>
+        } <br> <br>
+        let patas = Symbols(); <br>
+        Cachorro.prototype[patas] = 4; <br>
+        let golden = new Cachorro('Golden Retriever'); <br>
+    </p>
 </body>
 </html>

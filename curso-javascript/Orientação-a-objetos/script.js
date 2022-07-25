@@ -89,6 +89,8 @@ pastor.raça = 'Pastor Alemão';
 console.log(pastor.raça);
 */
 
+/* criar classe por constructor
+
 function criarCachorro(raça, patas, cor) {
     let cachorro = Object.create({});
     cachorro.raça = raça;
@@ -103,5 +105,86 @@ function criarCachorro(raça, patas, cor) {
 let doberman = criarCachorro('Doberman', 4, 'preto');
 console.log(doberman)
 doberman.latir();
+*/
 
+/* Constutor por NEW
+function Cachorro(raça, patas, cor) {
+    this.raça = raça;
+    this.patas = patas;
+    this.cor = cor;
+    this.uivar = function () {
+        console.log('Auuuuuuuuu!!!')
+    }
+}
+
+let husky = new Cachorro('Husky', 4, 'Cinza')
+
+husky.uivar();
+*/
+
+/* Constructor com método
+function Cachorro(raça, patas, cor) {
+    this.raça = raça;
+    this.patas = patas;
+    this.cor = cor;
+}
+Cachorro.prototype.uivar = function () {
+    console.log('Auuuuuuuu!!!')
+}
+Cachorro.prototype.latir = function () {
+    console.log('Au Au Au')
+}
+let husky = new Cachorro('Husky', 4, 'Cinza')
+
+husky.uivar();
+husky.latir();
+*/
+
+/* Constructor na classe (ES6) 
+class Cachorro {
+    constructor(raça, patas, cor) {
+        this.raça = raça;
+        this.patas = patas;
+        this.cor = cor;
+    }
+}
+let labrador = new Cachorro('Labrador', 4, 'Amarelo')
+console.log(labrador); 
+*/
+
+/* Override nas propriedades do prototype
+class Cachorro {
+    constructor(raça, cor) {
+        this.raça = raça;
+        this.cor = cor;
+    }
+    latir() {
+        console.log('Au Au Au')
+    }
+}
+Cachorro.prototype.raça = 'SRD';
+Cachorro.prototype.patas = 4;
+
+let labrador = new Cachorro('Labrador', 'Amarelo')
+
+console.log(labrador.patas);
+labrador.latir();
+console.log(Cachorro.prototype.raça);
+console.log(labrador.raça);
+*/
+
+/* class Cachorro {
+    constructor(raça, cor) {
+        this.raça = raça;
+        this.cor = cor;
+    }
+    latir() {
+        console.log("Au AU AU")
+    }
+}
+Cachorro.prototype.patas = 4;
+let labrador = new Cachorro('Labrador', 'Amarelo')
+console.log(labrador.patas)
+labrador.latir();
+*/
 
