@@ -152,5 +152,60 @@
         Cachorro.prototype[patas] = 4; <br>
         let golden = new Cachorro('Golden Retriever'); <br>
     </p>
+    <h3>Getters and Setters</h3>
+    <p>São metodos que vão setar propriedades, o JavaScript vai te dar uma sintaxe para criar de forma mais objetiva dentro das classe.</p>
+    <ul>
+        <li>Get: serve para resgatar o valor de uma propriedade.</li>
+        <li>Set: serve para alterar o valor de uma propriedade.</li>
+    </ul> 
+    <p>EX: <br>
+        class Cachorro{ <br>
+            constructor(raça) { <br>
+                this.raça = raça; <br>
+            } <br>
+            get verRaça() { <br>
+                return 'A raça é' + this.raça; <br>
+            } <br>
+            set novaRaça(value) { <br>
+                this.raça = value; <br>
+            } <br>
+        } <br> <br>
+        let golden = new Cachorro('Pastor Alemão'); <br>
+        console.log(golden.verRaça); <br>
+        golden.novaRaça = 'Golden';<br>
+    </p>
+    <h3>Herança//inheritance</h3>
+    <p>Uma classe pode herdar propriedade de outra classe por herança, para isso utilizamos extends</p>
+    <p>E: <br>
+        class Mamiferos{  <br>
+            constructor(patas) { <br>
+                this.patas = patas; <br>
+            } <br>
+        } <br>
+        class Cachorro extends Mamifero { <br>
+            constructor(patas, raça) { <br>
+                super(patas, patas); <br>
+                this.raça = raça; <br>
+            } <br>
+        } <br> <br>
+        let pug = new Cachorro(4, 'Pug'); <br>
+        console.log(pug); <br>
+    </p>
+    <h3>Instanceof operator</h3>
+    <p>Podemos verificar quem é o pai do objeto utilizando o instanceof</p>
+    <p>EX: <br>
+        class Mamifero { <br>
+            constructor(patas, raça) { <br>
+                this.patas = patas; <br>
+            } <br>
+        } <br>
+        class Cachorro extends Mamifero { <br>
+            constructor(patas, raça) { <br>
+                super(patas, patas); <br>
+                this.raça = raça; <br>
+            } <br>
+        } <br>
+        console.log(new Cachorro instanceof Mamifero); <br>
+    </p>
 </body>
 </html>

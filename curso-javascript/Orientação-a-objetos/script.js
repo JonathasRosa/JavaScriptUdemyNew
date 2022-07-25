@@ -173,7 +173,8 @@ console.log(Cachorro.prototype.raça);
 console.log(labrador.raça);
 */
 
-/* class Cachorro {
+/* Acessando com Symbols
+class Cachorro {
     constructor(raça, cor) {
         this.raça = raça;
         this.cor = cor;
@@ -182,9 +183,99 @@ console.log(labrador.raça);
         console.log("Au AU AU")
     }
 }
-Cachorro.prototype.patas = 4;
+Cachorro.prototype.raça = 'SRD';
+
+let patas = Symbol();
+
+Cachorro.prototype[patas] = 4;
+
 let labrador = new Cachorro('Labrador', 'Amarelo')
+
 console.log(labrador.patas)
+
 labrador.latir();
+
+console.log(Cachorro.prototype.raça);
+console.log(labrador.raça);
+
+//acessando symbol
+
+console.log(Cachorro.prototype[patas]);
+
+console.log(labrador[patas]);
 */
 
+/* Getters and Setters
+class Cachorro {
+    constructor(raça, cor) {
+        this.raça = raça;
+        this.cor = cor;
+    }
+    latir() {
+        console.log("Au Au")
+    }
+    get getCor() {
+        return this.cor;
+    }
+    set setCor(cor) {
+        this.cor = cor;
+    }
+}
+let pastor = new Cachorro('Pastor Alemão', 'Sem cor')
+
+console.log(pastor);
+pastor.setCor = 'Marron';
+console.log(pastor.getCor);
+*/
+
+/* Herança//inheritance 
+class Mamifero{
+    constructor(patas) {
+        this.patas = patas;
+    }
+}
+let coiote = new Mamifero(4);
+
+console.log(coiote.patas)
+
+class Cachorro extends Mamifero {
+    constructor(patas, raça) {
+        super(patas, patas);
+        this.raça = raça
+    }
+    latir() {
+    console.log('Au Au');
+    }
+}
+let pug = new Cachorro(4, 'Pug');
+console.log(pug.patas)
+pug.latir(); 
+*/
+
+/* Instanceof operator
+class Mamifero{
+    constructor(patas) {
+        this.patas = patas;
+    }
+}
+let coiote = new Mamifero(4);
+
+console.log(coiote.patas)
+
+class Cachorro extends Mamifero {
+    constructor(patas, raça) {
+        super(patas, patas);
+        this.raça = raça
+    }
+    latir() {
+    console.log('Au Au');
+    }
+}
+let pug = new Cachorro(4, 'Pug');
+console.log(pug.patas)
+pug.latir(); 
+
+console.log(new Cachorro instanceof Mamifero);
+
+console.log(coiote instanceof Mamifero);
+*/
