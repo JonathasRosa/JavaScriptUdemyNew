@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,62 @@
     <title>Expressões Regulares</title>
 </head>
 <body>
-    
+    <h1>Expressões Regulares</h1>
+    <h2>O que são expressões regulares?</h2>
+    <p>Uma forma de encontrar padrões em uma string, por exemplo, validar se só tem múmeros.</p>
+    <p>Em vez de criarmos funções comlexas, podemos encontrar dados em texto por meio das expressões regulares, também chamada de <strong>regex</strong>.</p>
+    <h2>Criando uma expressão regular</h2>
+    <p>As expressões regulares no JS são um tipo de objeto, podendo então instancia-lo de duas formas</p>
+    <ul>
+        <li>New RegExp.</li>
+        <li>/.../ 'Dentro de barras' (sendo a mais utilizada).</li>
+    </ul>
+    <p>EX: <br><br>
+        let reg1 = new RegExp("test");<br>
+        let reg2 = /teste/;<br>
+    </p>
+    <h2>Verificando padrões com REGEX</h2>
+    <p>Depois da definição do padrão por meio da <strong>REGEX</strong>, utilizamos o metodo test(), para verificar se o padrão é retornado,com isso vamos receber a resposta true ou false.</p>
+    <p>EX: <br>
+        console.log(/testando/.test("ttttestandoooo"));
+        console.log(/testando/.test("astestansd"));
+    </p>
+    <h2>Conjunto de caracteres</h2>
+    <p>Podemos definir um conjunto de caracteres para encontrar por regex, basta por [] e com um traço podemos definir um intervalo também.</p>
+    <p>EX: <br> <br>
+        console.log(/[123]/.test("Existe 123 aqui?")) <br>
+        console.log(/[0 - 9]/.test("O número 8 está presente aqui?")) <br>
+    </p>
+    <h2>Caracteres especiais</h2>
+    <ul>
+        <li>\d - Qualquer digito de caractere;</li>
+        <li>\w - Um caractere alfanumérico("teste");</li>
+        <li>\s - Qualquer caractere de espaço em branco;</li>
+        <li>\D - Caractere que não são dígitos;</li>
+        <li>\W - Caractere não-alfanumérico</li>
+        <li>\S - caractere que não seja espaço em branco;</li>
+        <li> <strong>.</strong> - Qualquer caractere, menos nova linha.</li>
+    </ul>
+    <h2>Regex com caracteres especiais</h2>
+    <p>Podemos utilizar os caracteres especiais de várias formas, veja.</p>
+    <p>EX: <br><br>
+        let ano = /\d\d\d\d/; <br> <br>
+        console.log(ano.test("05")); <br>
+        console.log(ano.test("2022")); <br>
+        console.log(ano.test("opa")); <br> <br>
+        let palavraTresLetras = /\w\w\w/; <br><br>
+        console.log(palavraTresLetras.test("dia")); <br>
+        console.log(palavraTresLetras.test("ano")); <br>
+        console.log(palavraTresLetras.test("oi"));<br>
+        console.log(palavraTresLetras.test("teste")); <br>
+    </p>
+    <h2>Operador not (^).</h2>
+    <p>Podemos escrever um set que aceitam tudo, menosalguns caracteres com o not, lembrando que combinações serão aceitas, o negado é apenas se bate com o set.</p>
+    <p>EX: <br><br>
+        let palavrasSemAeB = /[^123]/; <br><br>
+        console.log(palavrasSemAeB.test("1112")); <br>
+        console.log(palavrasSemAeB.test("14")); <br>
+        console.log(palavrasSemAeB.test("1")); <br>
+    </p>
 </body>
 </html>
