@@ -80,5 +80,37 @@
         <ul><li>uncaught Erro: O valor de a não pode ser 1 at window.onload(.(index):36)</li></ul>
     </p>
     <h2>Try and catch</h2>
+    <p>O bloco try catch, vai tentar executar um código, caso não consiga, ele pode retornar o erro que esse código gerou, sendo assim muito útil para debug.</p>
+    <p>EX: <br><br>
+    try { <br>
+        let c = a + b; <br>
+    } catch(erro) { <br>
+        console.log("Algo deu errado: " + error); <br>
+    } <br>
+    </p>
+    <h2>Finally</h2>
+    <p>Finally é executada independente do resultado do try/catch, podendo exixtir com try e catch ou apenas com try.</p>
+    <p>EX: <br> <br>
+        try { <br>
+            let c = a + b; <br>
+        } catch(error) { <br>
+            console.log("Algo deu errado: " + error); <br>
+        } finally { <br>
+            console.log("Executor") <br>
+        } 
+    </p>
+    <h2>Assertion</h2>
+    <p>Verificações de programas, que são utilizadas para assegurar que tudo ocorra da forma esperada.</p>
+    <p>EX:<br> <br>
+        function iterarArray(arr) { <br>
+            if(arr.length == 0) { <br>
+                throw new Error("O array precisa ter elementos"); <br>
+            } else { <br>
+                for(let i = 0; i < arr.length; i++) { <br>
+                    console.log(arr[i]); <br>
+                } <br>
+            } <br>
+        } <br>
+    </p>
 </body>
 </html>

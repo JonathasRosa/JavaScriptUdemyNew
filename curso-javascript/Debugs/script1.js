@@ -87,6 +87,7 @@ let number = prompt("Digite um número.");
 checarNumero(number);
 */
 
+/* Exceptions
 function saudação(nome) {
     if (typeof nome != "string") {
         throw new Error("o parâmetro nome precisar ser uma string")
@@ -98,3 +99,52 @@ saudação("Jonathas");
 // saudação(5);
 
 console.log("teste");
+*/
+/* Try and catch
+// let b = 6;
+try {
+    let a = 2 + b;
+} catch(e) {
+    console.log(e);
+    //throw new Error(e);
+}
+console.log('Teste'); 
+*/
+
+/* Finally
+let b = 6;
+try {
+    let a = 2 + b;
+} catch(e) {
+    console.log(e);
+    //throw new Error(e);
+} finally { //não é muito utilizado.
+    console.log("executou");
+}
+//console.log('Teste');
+*/
+
+//Assertion 
+let arr = [1, 2, 3, 4, 5];
+let arr2 = [5,6,8]; //Adicionado os elementos, caso alguma array não tivesse elementos, daria error.
+
+function iterarArray(arr) {
+    if (arr.length == 0) {
+        throw new Error("O array precisa ter pelo menos um elemento");
+    } else {
+        for (let i = 0; i < arr.length; i++) {
+            console.log(i);
+        }
+    }
+}
+
+function arrayVazio(arr) {
+    if (arr.length > 0) {
+        throw Error("O array não pode ter elementos");
+    } else {
+        console.log("Agora deu certo")
+    }
+}
+
+iterarArray(arr);
+iterarArray(arr2);
