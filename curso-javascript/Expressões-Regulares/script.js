@@ -84,8 +84,58 @@ console.log(palavrasPeloMenosTresLetras.test("asdf"));
 console.log(palavrasPeloMenosTresLetras.test("as")); 
 */
 
+/*Operador NOT
 let palavrasSemAeB = /[^123]/;
- 
+
 console.log(palavrasSemAeB.test("1112"));
 console.log(palavrasSemAeB.test("14"));
 console.log(palavrasSemAeB.test("1")); 
+
+const notab = /[^ab]/;
+
+console.log(notab.test("a"));
+console.log(notab.test("Aqui tem a"));
+
+const nottoaz = /[^a-z]/;
+
+console.log(notab.test("123 as"));
+console.log(notab.test("mwehbvfwlkemfvwklemfvLÇSADM,VPOawjegçlwemg"));
+
+const az = /[a-z]/;
+
+console.log(nottoaz.test("asd1587dfrf5e33fr"));
+*/
+
+/*Operador plus +
+let muitosOuPoucosDigitos = /\d+/; 
+
+console.log(muitosOuPoucosDigitos.test("123"));
+console.log(muitosOuPoucosDigitos.test("0123456789"));
+console.log(muitosOuPoucosDigitos.test(" "));
+
+let umOuMaisNumeros = /\d+/;
+
+console.log(umOuMaisNumeros.test("123456"));
+console.log(umOuMaisNumeros.test(" "));
+console.log(umOuMaisNumeros.test("asdfghjklç"));
+console.log(umOuMaisNumeros.test("1a2b3c4d5f6g"));
+*/
+
+let opcional = /Prova\s?\d?/;
+
+console.log(opcional.test("Prova"));
+console.log(opcional.test("Prova 1"));
+console.log(opcional.test("Prova 2"));
+
+const padrão = /Abacax?i/;
+
+console.log(padrão.test("Abacaxi"));
+console.log(padrão.test("Abacai"));
+
+const padrão2 = /\d+\w?/;
+
+console.log(padrão2.test("123"));
+console.log(padrão2.test("123a"));
+console.log(padrão2.test("123 "));
+
+

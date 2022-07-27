@@ -65,5 +65,22 @@
         console.log(palavrasSemAeB.test("14")); <br>
         console.log(palavrasSemAeB.test("1")); <br>
     </p>
+    <h2>Operador plus +</h2>
+    <p>Quando um <strong>"+"</strong> está a´pos alguma expressão, este elemento pode se repetir mais de uma vez.</p>
+    <p>EX: <br><br>
+        let muitosOuPoucosDigitos = /\d+/; <br><br>
+        console.log(muitosOuPoucosDigitos.test("123")); <br>
+        console.log(muitosOuPoucosDigitos.test("0123456789")); <br>
+        console.log(muitosOuPoucosDigitos.test(" "));
+    </p>
+    <h2>Operador question "?"</h2>
+    <p>Ele faz com que o dígito anterior seja opcional.</p>
+    <p>EX: <br> <br>
+        let opcional = /Prova\s?\d?/; <br><br>
+        console.log(opcional.test("Prova"));<br>
+        console.log(opcional.test("Prova 1"));<br>
+        console.log(opcional.test("Prova 2"));<br>
+    </p>
+    <h2></h2>
 </body>
 </html>
