@@ -81,6 +81,64 @@
         console.log(opcional.test("Prova 1"));<br>
         console.log(opcional.test("Prova 2"));<br>
     </p>
-    <h2></h2>
+    <h2>Ocorrência precisa</h2>
+    <p>Incerir o número de ocorrência entre {chaves}.</p>
+    <p>EX: <br>
+        le telefone = /\d{4,5}-\d{4}/; <br> <br>
+        console.log(telefone.test("4004-5050")); <br>
+        console.log(telefone.test("99999-8080")); <br>
+        console.log(telefone.test("999-999")); <br>
+        console.log(telefone.test("99999-9")); <br>
+    </p>
+    <h2>Método Exec</h2>
+    <p>O método exec nos retorna um objeto com algumas informações sobre a regex, se nada for encontrado , retorna null.</p>
+    <p>EX: <br>
+        let teste = /\d+/.exec("O número 100"); <br><br>
+        console.log(teste);<br>
+        console.log(teste.index);<br>
+    </p>
+    <h2>Método match</h2>
+    <p>O método match funciona de forma similar ao exec.</p>
+    <p>EX: <br>
+        const frase = "O número 100 está aqui".match(/\d+/); <br>
+        const frase2 = "O número está aqui".match(/\d+/); <br> <br>
+        console.log(frase);
+        console.log(frase2);
+    </p>
+    <h2>Choice pattern</h2>
+    <p>Podemos colocar uma instrução na regex que funciona como ||(or) das comdições</p>
+    <p>EX: <br>
+        let frutas = /\d+ (bananas|maçãs|laranjas)/;
+        console.log(frutas.test("10 bananas"));
+        console.log(frutas.test("25 batatas"));
+        console.log(frutas.test("8 laranjas"));
+    </p>
+    <H2>Vaidando domínio</H2>
+    <p>Podemos validar o domínio da seguinte forma.</p>
+    <p>EX: <br>
+        let validarDomínio = /www.\w+\.com|com.br/; <br><br>
+        console.log(validarDomínio.test("www.google.com")); <br>
+        console.log(validarDomínio.test("www.test"));<br>
+        console.log(validarDomínio.test("testando.com"));<br>
+        console.log(validarDomínio.test("www.horadecodar.com.br"));<br>
+    </p>
+    <h2>Validar email</h2>
+    <p>Podemos validar email da seguinte forma.</p>
+    <p>EX: <br><br>
+        let validarEmail = /\w+@\w+\.\w+/;<br><br>
+        console.log(validarEmail.test("test@email.com")) <br>
+        console.log(validarEmail.test("email@email")) <br>
+        console.log(validarEmail.test("ronaldo@yahoo.com")) <br>
+        console.log(validarEmail.test("email.com")) <br>  
+    </p>
+    <h2>Validar data de nascimento</h2>
+    <p>Podemos validar datas de nascimento  e datas em geral.</p>
+    <p>EX: <br><br>
+        let validarDataDeNascimento = /^[0-9]{2}[/][0-9]{2}[/][0-9]{4}/; <br><br>
+        console.log(validarDataDeNascimento.test('01/05/2000')) <br>
+        console.log(validarDataDeNascimento.test('10/6/2025')) <br>
+        console.log(validarDataDeNascimento.test('1/08/2018')) <br>
+        console.log(validarDataDeNascimento.test('31/3/1985')) <br>
+    </p>
 </body>
 </html>
