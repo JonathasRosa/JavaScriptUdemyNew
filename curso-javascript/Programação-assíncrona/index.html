@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,24 @@
 <body>
     <h1>Programação Assíncrona</h1>
     <h2>O que é programação assíncrona?</h2>
-    <p></p>
+    <h3>Callback</h3>
+    <p>A programação assíncrona acontece de forma que várias ações acontecem ao mesmo tempo, sem uma sequência programática.</p>
+    <p>Ex: Um usuário está no checkout, manda salvar seu endereço na conta, mas pode prosseguir para finalizar sem recarregar a página, pois a a ação de adicionar o endereço ocorreu de forma assíncrona.</p>
+    <h3>Promises</h3>
+    <p>As <strong>promises</strong> são ações assíncronas que podem produzir um valor em algum momento no código, sendo uma forma de dizer a linguagem que um valor pode estar presente em um futuro do código.</p>
+    <p>O objeto das promises é o <strong>Promise</strong>, <strong>resolve</strong> é o método que resolve uma promise, o <strong>then</strong> é o que faz ela poder ser executada em um ponto futuro do código.</p>
+    <p>EX: <br><br>
+        let promessa = Promise.resolve(4 + 8);<br>
+        console.log('Algum código');<br>
+        promessa.then((value) => console.log(`A soma é ${value}`)) <br>
+    </p>
+    <h3>Falha no Promises</h3>
+    <p>O promises pode falhar e podemos reter esse erros com um método chamado <strong>catch</strong>, com ele podemos exibir o erro no console e fazer um debug no código.</p>
+    <p>EX: <br><br>
+        let promisesErrada = Primise.resolve(new Error("Algo deu errado")) <br><br>
+        promiseErrada <br>
+            .then((value) => console.log(value)) <br>
+            .catch(reason => console.log("Erro: " + reason)); <br>
+    </p>
 </body>
 </html>
