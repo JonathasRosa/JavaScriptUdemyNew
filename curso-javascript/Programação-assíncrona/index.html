@@ -29,5 +29,62 @@
             .then((value) => console.log(value)) <br>
             .catch(reason => console.log("Erro: " + reason)); <br>
     </p>
+    <h3>Rejeitando Promises</h3>
+    <p>Além do método reslve existe também o método reject, quando uma determinada lógica não satisfaz nosso programa, podemos ir para outra lógica com o <strong>reject</strong> em vez do relove, terminando a promise não podendo mais chamar o then, por exemplo.</p>
+    <p>EX: <br>
+        function verificarAlgo(num) {
+            return new Promise((resole, reject) => {
+                if(num == 2) {
+                    resolve(console.log("O número é 2"));
+                } else {
+                    reject(new Error("Falhou"));
+                }
+            })
+        }
+        verificarAlgo(3);
+        verificarAlgo(4);
+    </p>
+    <h3>Método All</h3>
+    <p>Com o método All podemos resolver todas as promises de uma vez só, ou seja, passamos elas por array e quando a última for resolvida recebemos a resposta.</p>
+    <p>EX: <br> <br>
+        const p1 = new Promise(function(resolve, reject){ <br>
+            setTimeout(function(){ <br>
+                resolve(100); <br>
+            }, 2500); <br>
+        }) <br>
+        const p2 = promise.resolve(5);<br>
+        const p3 = new Promise(function(resolve, reject) { <br>
+            resolve(10); <br>
+        });<br>
+        promise.all([p1,p2,p3]).then((value)=> console.log(values));
+    </p>
+    <h3>Async Function</h3>
+    <p>Podemos criar funcões assíncronas com a palavra reservada async, elas retornam uma Promise, essa promise é resolvida e se der alguma exception a promise é rejeitada.</p>
+    <p>EX: <br>
+        async function somar(a,b) {
+            return a + b;
+        }
+        somar(2,2).then(function(value){
+            console.log(value);
+        });
+    </p>
+    <h3>Await</h3>
+    <p>Nas async function, podemos determinar uma instrução await, que vai esperar uma promise ser resolvida  para apresentar os resultados.</p>
+    <p>EX: <br>
+        function somaComDeplay(a,b) {
+            return new Promise(resolve => {
+                setTimeout(function()) {
+                    resolve(a + b);
+                }, 2000) ;
+            });
+        }
+        async function soma(a,b,c,d) {
+            let x = somaComDelay(a,b);
+            let y = somaComDeley(c,d)
+
+            return await x + await y;
+        }
+        soma(2,4,6,8).then(x =>console.log(y));
+    </p>
 </body>
 </html>

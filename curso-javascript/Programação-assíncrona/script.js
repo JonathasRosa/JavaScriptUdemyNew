@@ -36,3 +36,64 @@ p.then(value => console.log(value))
  
 let promisesErrada = Promise.resolve(new Error("Algo deu errado"))
 */
+/* Promises - Reject
+function verificarNumero(num) {
+    return new Promise((resolve, reject) => {
+        if (num == 2) {
+            resolve(console.log(`O numero é ${num}`));
+        } else {
+            reject(new Error("Falhou"));
+        }
+    });
+}
+verificarNumero(2);
+verificarNumero(3);
+*/
+
+/* EX-1: All - Promises
+
+const p1 = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        resolve(100);
+    }, 2500);
+})
+const p2 = Promise.resolve(5);
+const p3 = new Promise(function(resolve, reject) {
+    resolve(10);
+});
+Promise.all([p1, p2, p3]).then((values) => console.log(values));
+*/
+
+/*EX-2: All - Promises
+
+const p1 = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        resolve(15);
+    }, 5000);
+});
+const p2 = Promise.resolve(10);
+
+const p3 = new Promise((resolve, reject) => {
+    resolve(12);
+});
+
+Promise.all([p1, p2, p3]).then((values) => console.log(values));
+*/
+/* EX-1: Async function
+async function somar(a,b) {
+    return a + b;
+}
+somar(2,2).then(function(value){
+    console.log(value);
+});
+
+EX-2: Async Function
+async function somar(a, b) {
+    return a + b
+        ;
+} 
+console.log(somar(2, 4));
+
+somar(2, 4).then(value => console.log(value));*/
+
+function somaComDeley(a,b)
