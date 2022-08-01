@@ -70,21 +70,33 @@
     </p>
     <h3>Await</h3>
     <p>Nas async function, podemos determinar uma instrução await, que vai esperar uma promise ser resolvida  para apresentar os resultados.</p>
-    <p>EX: <br>
-        function somaComDeplay(a,b) {
-            return new Promise(resolve => {
-                setTimeout(function()) {
-                    resolve(a + b);
-                }, 2000) ;
-            });
-        }
-        async function soma(a,b,c,d) {
-            let x = somaComDelay(a,b);
-            let y = somaComDeley(c,d)
-
-            return await x + await y;
-        }
+    <p>EX: <br><br>
+        function somaComDelay(a,b) { <br>
+            return new Promise(resolve => { <br>
+                setTimeout(function()) { <br>
+                    resolve(a + b); <br>
+                }, 2000) ; <br>
+            }); <br>
+        } <br>
+        async function soma(a,b,c,d) { <br>
+            let x = somaComDelay(a,b); <br>
+            let y = somaComDeley(c,d) <br>
+            return await x + await y; <br>
+        } <br>
         soma(2,4,6,8).then(x =>console.log(y));
+    </p>
+    <h3>Generators</h3>
+    <p>generators funcionam semelhante as Promises, onde as ações podem ser pausadas e continuadas depois. são caracterizadas pela <strong>function*</strong> e <strong>yield</strong>,onde o yield pode salvar o estado da variável.</p>
+    <p>EX: <br><br>
+        function* genTest() { <br>
+            let id = 0; <br>
+            while(true) { <br>
+                yield id++; <br>
+            } <br>
+        } <br>
+        let criarId = genTest(); <br>
+        console.log(criarId.next().value); <br>
+        console.log(criarId.next().value);
     </p>
 </body>
 </html>
