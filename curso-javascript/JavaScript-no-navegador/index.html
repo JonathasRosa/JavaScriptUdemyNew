@@ -8,15 +8,16 @@
     <title>JavaScript no Navegador</title>
 </head>
 <body>
-    <header class="cabecalho">
-        <div id="container-principal">
-            <h1 id="titulo-principal">A web</h1>
+    <header >
+        <div class="cabecalho">
+            <h1 id="titulo-principal">A web </h1>
+            <p id="p.cabecalho">JS</p>
         </div>
     </header>
     <main class="slider">
     <div id="container-secundario-1">
-        <h2>Protocolos</h2>
-        <p>Um protocolo é uma forma de comunicação entre computadores através da rede.</p>
+        <h2 class="box">Protocolos</h2>
+        <p class="paragrafo-principal">Um protocolo é uma forma de comunicação entre computadores através da rede.</p>
         <p>Exemplos de protocolos:</p>
         <ul>
             <li class="itens"><Strong>HTTP</Strong>, serve para nós solicitarmos arquivos, imagens e etc.(Hyper Text Transfer Protocol)</li>
@@ -131,7 +132,19 @@
         </p>
     </div>
     <div>
-        h2
+        <h2>Alterando DOM com appendChild</h2>
+        <p>Adiciona um nó após todos os elementos do elemento pai especificado</p>
+        <p>EX: <br>
+            let p = docment.createElement("p"); <br>
+            let el 2 = document.querySelector("h1"); <br>
+            let pai2 = el2.parentNode; <br><br>
+            pai2.apependChild(p);
+        </p>
+    </div>
+    <div>
+        <h2>Alterando a DOM com replaceChild</h2>
+        <p>Repõe o elemnto antigo no DOM, com um novo elemento.</p>
+        <p></p>
     </div>
     </main>
     <footer>

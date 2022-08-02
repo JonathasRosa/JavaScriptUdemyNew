@@ -13,6 +13,7 @@ console.log(document.body.childNodes[1].childNodes[1].innerText);
 //console.log(document.querySelector('#container-secundario-1'));
 //console.log(document.querySelector('footer p'));
 
+/*
 let newElement = document.createElement("p");
 let texto = document.createTextNode("Testando o insertBefore.")
 
@@ -22,3 +23,15 @@ let elementALvo = document.querySelector("#h2");
 let elementFather = document.querySelector("#container-secundario-15");
 
 elementFather.insertBefore(newElement, elementALvo);
+*/
+/*
+let novoElemento = document.createElement("p");
+let texto = document.createTextNode("Testando o appendChild.")
+
+novoElemento.appendChild(texto);
+
+let p = document.querySelector("#paragrafo-principal");
+let pai = p.parentNode
+
+pai.appendChild(novoElemento);
+*/
