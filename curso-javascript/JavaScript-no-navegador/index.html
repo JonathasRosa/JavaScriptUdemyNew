@@ -8,24 +8,20 @@
     <title>JavaScript no Navegador</title>
 </head>
 <body>
-    <header >
-        <div class="cabecalho">
-            <h1 id="titulo-principal">A web </h1>
-            <p id="p.cabecalho">JS</p>
-        </div>
+    <header id="container-principal">
+            <h1>A web com JavaScript</h1>
+            <!--<h2>A web com JavaScript</h2>-->  
+            <!--<p>Integrado</p>--> 
     </header>
-    <main class="slider">
-    <div id="container-secundario-1">
-        <h2 class="box">Protocolos</h2>
-        <p class="paragrafo-principal">Um protocolo é uma forma de comunicação entre computadores através da rede.</p>
+    <main id="container-secundario">
+        <h2>Protocolos</h2>
+        <p>Um protocolo é uma forma de comunicação entre computadores através da rede.</p>
         <p>Exemplos de protocolos:</p>
         <ul>
             <li class="itens"><Strong>HTTP</Strong>, serve para nós solicitarmos arquivos, imagens e etc.(Hyper Text Transfer Protocol)</li>
             <li class="itens"><strong>SMTP</strong>, protocolos para enviar e-mail.</li>
             <li class="itens"><strong>TCP</strong>, protocolo de transferência.</li>
         </ul>
-    </div>
-    <div id="container-secundario-2">
         <h2>O que é uma URL?</h2>
         <p>Cada arquivo que carrega no navegador é nomeado por uma <strong>URL</strong> que pode ser dividido em três partes</p>
             <ul>
@@ -33,36 +29,22 @@
                 <li class="itens"><strong>jonathasrosa.github.io/Portifolio/projeto-cordel-digital </strong> - Servidor (DNS para um IP) onde o site é hospedado;</li>
                 <li class="itens"><strong>index.html</strong> - o arquivo que vai ser carregado no servidor e depois subir para a rede.</li>
             </ul>
-    </div>
-    <div id="container-secundario-3">
         <h2>O arquivo HTML</h2>
         <p>HTML (Hyper Text Markup Language) é uma linguagem de marcação, responsável pelos textos e elementos que vemos na tela ao acessar uma página web.</p>
         <p>As tags do HTML, servem para criar elementos como título, parágrafos, imagens, listas etc, dentro do arquivo.</p>
         <p>Uma tag é definida por abertura e fechamento com a seguinte estrutura abre a tag com sinal de menor que "<" coloca o elemento dentro e fecha com o ">" sinal de maior que, isso abre uma tag, para fechar uma tag usa-se o sinal de menor que "<" depois uma barra vertical para direita "/" coloca o elemento dentro e fecha a tag com sinal de maior que ">" novamente.</p>
-    </div>
-    <div id="container-secundario-4">
         <h2>Html - parte 2</h2>
         <p>Todo documento HTML tem sempre duas partes importantes, <strong>head</strong> e <strong>body</strong>.</p>
         <p>O head serve para configurações do documento, como links de fora de estilo ou até de scripts de JavaScript, tags de configurações meta links entre  outras.</p>
         <p>O body para elementos, ou seja, a parte visual, "p, h1, div, ul, li,strong, dentre várias outras.</p>
-    </div>
-    <div id="container-secundario-5">
         <h2>O HTML e o JavaScript</h2>
         <p>Podemos utilizar JavaScript no HTML por meio da tag "script", ou likar um  arquivo .js por meio de script com o atibuto src(forma mais utilizada),  algumas tags HTML aceitam atributos que executam JS, mas não é muito  utilizado. Lembrando sempre que sempre que linkamos um arquivo externo,  estamos chamando ele via HTTP.</p>
-    </div>
-    <div id="container-secundario-6">
         <h2>O HTML e o DOM</h2>
         <p>Quando uma página web é reqisitada, ela recebe um texto que é transformado em uma estrutura HTML, as tags vão se aninhando uma às outras, formando uma  estrutura em que elementos ficam dentro dos outros, essa estrutura tem uma  representação exatamente igual para o JS chamado de DOM (Document Object  Model) e por meio do Java Script podemos acessar cada um desses elementos do  HTML através do DOM.</p>
-    </div>
-    <div id="container-secundario-7">
         <h2>Entendendo o DOM</h2>
         <p>Podemos mudar completamente uma página HTML através do DOM, sendo possível alterar, elementos, atributos, CSS, além de alterar podemos adicionar e também remover elementosm além de ser possível criar eventos na página, como animações.</p>
-    </div>
-    <div id="container-secundario-8">
         <h2>A árvore do DOM</h2>
         <p>O docmento HTML seria uma árvore completa, a raiz da árvore é o documento em si (tendo somente uma raiz), cada elemento da árvore chamamos de node (nó - head, title, body, tags), conteúdos como texto são chamados de leaf nodes(as folhas)</p>
-    </div> 
-    <div id="container-secundario-9">
         <h2>Acessando elementos/tags</h2>
         <p>Podemos acessar todos os elementos a partir de 'document' a partir dele vamos entrando nos childNodes (nós-filhos) e depois acessando as propriedades que nos interessasm.</p>
         <p>EX:
@@ -74,8 +56,6 @@
                 <li class="itens">console.log(docment.body.childNodes[1].childNodes[1].innerText);</li>
             </ul>
         </p>
-    </div>
-    <div id="container-secundario-10">
         <h2>Encontrando elementos</h2>
         <p>Podemos encontrar elementos de uma forma mais fácil do que se movendo pelo DOM, como no HTML temos tags, class e ids, o JavaScript nos possibilita utilizar essas caracteristicas para encontrar o que desejamos</p>
         <p>Existe alguns metodos para isso:
@@ -86,8 +66,6 @@
                 <li class="itens">querySelector</li>
             </ul>
         </p>
-    </div>
-    <div id="container-secundario-11">
         <h2>Encontrando elementod por ID</h2>
         <p>Utilizamos o seguinte método para encontrar elementos por ID.</p>
         <p>EX:
@@ -95,8 +73,6 @@
                 <li class="itens">console.log(document.getElementById('titulo-principal);</li>
             </ul>
         </p>
-    </div>
-    <div id="container-secundario-12">
         <h2>Encontrando elementos por class.</h2>
         <p>Utilizamos o segunte método para encontrar elementos por <strong>class</strong>.</p>
         <p>EX:
@@ -104,8 +80,6 @@
                 <li class="itens">console.log(document.getElementsByClassName('teste'));</li>
             </ul>
         </p>
-    </div>
-    <div id="container-secundario-13">
         <h2>Encontrando elementos por Query</h2>
         <p>Um método que se assemelha a grande funcionalidade <strong>jQuery</strong>, nos permitindo encontrar elementos pelo seus seletores de <strong>CSS</strong>, que facilita muito a nossa vida.</p>
         <p>
@@ -116,12 +90,9 @@
                  <li class="itens">console.log(document.querySelector('h1'));</li>   
             </ul>
         </p>
-    </div>
-    <div id="container-secundario-14">
         <h2>Alterando o HTML</h2>
         <p>Podemos mudar quase tudo atravé do DOM, adicionar, mover, clonar elementos, utilizando métodos como: <strong>insertBefore, appendChild, replaceChild</strong>.</p>
-    </div>
-    <div id="container-secundario-15">
+    
         <h2>Alterando a DOM com insertBefore</h2>
         <p>Insere um nó antes do nó de referência do método, precisamos de um elemento para ser adicionado, que terá outro elemento antes dele e o elemento pai destes dois.</p>
         <p>EX: <br><br>
@@ -130,8 +101,6 @@
             let pai = el.parentNode; <br><br>
             pai.insertBefore(span, el);
         </p>
-    </div>
-    <div>
         <h2>Alterando DOM com appendChild</h2>
         <p>Adiciona um nó após todos os elementos do elemento pai especificado</p>
         <p>EX: <br>
@@ -140,12 +109,51 @@
             let pai2 = el2.parentNode; <br><br>
             pai2.apependChild(p);
         </p>
-    </div>
-    <div>
         <h2>Alterando a DOM com replaceChild</h2>
         <p>Repõe o elemnto antigo no DOM, com um novo elemento.</p>
-        <p></p>
-    </div>
+        <p>
+            EX: <br><br>
+            let nerHeading = document.createElement('h') <br>
+            newHeading.textContent = 'Novo Texto'; <br><br>
+            let oldHedading = document.getElementById("old-heading"); <br>
+            let pai = oldHeading.parentNode;<br>
+            pai.replaceChild(newHeading, oldHeading);<br>
+        </p>
+        <h2 id="titulo-principal">Criando nós de Texto</h2>
+        <p id="paragrafo-principal">Podemos criar um nó(node) de texto puro e inserir em um elemento.</p>
+        <p id="sem-texto1"></p>
+        <p>EX: <br><br>
+            let text = document.createTextNode("Este é o texto novo.");<br>
+            let p = document.getElementById("p-sem-texto");<br>
+            p,appendChild(texto);
+        </p>
+        <h2>Criando nó de elementos </h2>
+        <p>Podemos criar um nó de elemento com o createElement e depois inserir no HTML.</p>
+        <p id="sem-texto2"></p>
+        <p>EX: <br><br>
+            let span = document.createElement("span");<br>
+            let el = document.querySelector("h1");<br>
+            let pai  = el.parentNode;<br><br>
+            pai.insertBefore(span, el);
+        </p>
+        <h2>Modificando e lendo atributos</h2>
+        <p>Podemos resgatar o valor de um atributo ou trocar com o DOM no JavaScript, por exemplo o href de um a ou osrc de um elemnto img, utilizando o "getAttribute" para pegar o elemento e o "setAttribute para atualizar o valor.</p>
+        <a href="#" target="_blank">MyGithub</a>
+        <p>EX: <br><br>
+            let url = document.getElementById('link');<br>
+            console.log(url.getAttribute('href'));<br>
+            url.setAttribute("href", "www.teste.com.br");<br>
+            console.log(url.getAttribute('href'));
+        </p>
+        <h2>Verificando altura e largura do elemento</h2>
+        <p>Com JavaScript também é possível verificar propriedades do elemento como como altura e largura, veja um exemplo.</p>
+        <p>EX: <br><br>
+            let elTeste = document.getElementById('título');<br>
+            console.log(elTest.offsetWidth);<br>
+            console.log(elTeste.offsetHeigth);<br><br>
+            console.log(elTest.clientWidth);<br>
+            console.log(elTeste.clientHeigth);
+        </p>
     </main>
     <footer>
         <p>Site criado por <a href="https://github.com/JONATHASROSA" target="_blank">&copy;JonathasRosaDev</a>.</p>

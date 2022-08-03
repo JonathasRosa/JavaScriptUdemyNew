@@ -35,3 +35,45 @@ let pai = p.parentNode
 
 pai.appendChild(novoElemento);
 */
+/*
+let novoElemento = document.createElement("p");
+let texto = document.createTextNode("Testando replaceChild ");
+
+novoElemento.appendChild(texto);
+
+let heading = document.querySelector('#titulo-principal');
+let paiHeading = heading.parentNode;
+
+paiHeading.replaceChild(novoElemento, heading);
+*/
+/*
+let pSemTexto = document.getElementById("sem-texto1");
+let texto = document.createTextNode("Texto inserido através do DOM.");
+pSemTexto.appendChild(texto);
+*/
+/*
+let lista = document.createElement('ul');
+for (i = 0; i < 5; i++) {
+    let item = document.createElement('li');
+    let texto = document.createTextNode("Lista criado com DOM " + i);
+    item.appendChild(texto);
+    lista.appendChild(item);
+}
+let p = document.getElementById('sem-texto2');
+p.appendChild(lista);
+*/
+/*
+let a = document.querySelector("a");
+console.log(a.getAttribute('href'));
+
+let link = 'https://github.com/JONATHASROSA';
+a.setAttribute('href', link);
+console.log(a.getAttribute('href'));
+*/
+let elemento = document.querySelector('#container-principal');
+
+console.log('Largura: ' + elemento.offsetWidth); //considera as bordas
+console.log('Altura: ' + elemento.offsetHeight);
+
+console.log('Largura: ' + elemento.clientWidth); //não considera as bordas
+console.log('Altura: ' + elemento.clientHeight);
