@@ -92,4 +92,10 @@ setTimeout(function () {
     elemento.style.textAlign = 'center';
 }, 1000);
 */
-let itens = document.querySelectorAll('itens-protocolos');
+/*
+let itens = document.querySelectorAll('.itens-protocolos');
+console.log(itens[0].style.color);
+itens[0].style.color = 'red';
+console.log(itens[0].style.color);
+let itens2 = document.querySelectorAll('.itens-partes')
+itens2[0].style.color = 'blue';*/
