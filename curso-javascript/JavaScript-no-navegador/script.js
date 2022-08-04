@@ -70,6 +70,7 @@ let link = 'https://github.com/JONATHASROSA';
 a.setAttribute('href', link);
 console.log(a.getAttribute('href'));
 */
+/*
 let elemento = document.querySelector('#container-principal');
 
 console.log('Largura: ' + elemento.offsetWidth); //considera as bordas
@@ -77,3 +78,18 @@ console.log('Altura: ' + elemento.offsetHeight);
 
 console.log('Largura: ' + elemento.clientWidth); //não considera as bordas
 console.log('Altura: ' + elemento.clientHeight);
+*/
+/*
+let elemento = document.querySelector('#titulo-principal');
+console.log(elemento.getBoundingClientRect());
+*/
+/*
+let elemento = document.querySelector('footer');
+setTimeout(function () {
+    elemento.style.color = 'red';
+    elemento.style.backgroundColor = 'yellow';
+    elemento.style.width = '400px';
+    elemento.style.textAlign = 'center';
+}, 1000);
+*/
+let itens = document.querySelectorAll('itens-protocolos');

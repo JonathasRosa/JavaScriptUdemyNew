@@ -18,16 +18,16 @@
         <p>Um protocolo é uma forma de comunicação entre computadores através da rede.</p>
         <p>Exemplos de protocolos:</p>
         <ul>
-            <li class="itens"><Strong>HTTP</Strong>, serve para nós solicitarmos arquivos, imagens e etc.(Hyper Text Transfer Protocol)</li>
-            <li class="itens"><strong>SMTP</strong>, protocolos para enviar e-mail.</li>
-            <li class="itens"><strong>TCP</strong>, protocolo de transferência.</li>
+            <li class="itens-protocolos"><Strong>HTTP</Strong>, serve para nós solicitarmos arquivos, imagens e etc.(Hyper Text Transfer Protocol)</li>
+            <li class="itens-protocolos"><strong>SMTP</strong>, protocolos para enviar e-mail.</li>
+            <li class="itens-protocolos"><strong>TCP</strong>, protocolo de transferência.</li>
         </ul>
         <h2>O que é uma URL?</h2>
         <p>Cada arquivo que carrega no navegador é nomeado por uma <strong>URL</strong> que pode ser dividido em três partes</p>
             <ul>
-                <li class="itens"><strong>Protocolo</strong> - http // https;</li>
-                <li class="itens"><strong>jonathasrosa.github.io/Portifolio/projeto-cordel-digital </strong> - Servidor (DNS para um IP) onde o site é hospedado;</li>
-                <li class="itens"><strong>index.html</strong> - o arquivo que vai ser carregado no servidor e depois subir para a rede.</li>
+                <li class="itens-partes"><strong>Protocolo</strong> - http // https;</li>
+                <li class="itens-partes"><strong>jonathasrosa.github.io/Portifolio/projeto-cordel-digital </strong> - Servidor (DNS para um IP) onde o site é hospedado;</li>
+                <li class="itens-partes"><strong>index.html</strong> - o arquivo que vai ser carregado no servidor e depois subir para a rede.</li>
             </ul>
         <h2>O arquivo HTML</h2>
         <p>HTML (Hyper Text Markup Language) é uma linguagem de marcação, responsável pelos textos e elementos que vemos na tela ao acessar uma página web.</p>
@@ -153,6 +153,26 @@
             console.log(elTeste.offsetHeigth);<br><br>
             console.log(elTest.clientWidth);<br>
             console.log(elTeste.clientHeigth);
+        </p>
+        <h2>Posição do elemento na tela</h2>
+        <p>Também é possível checar a posição do elemneto na tela, com o segunte seletor: getBoundingClientRec nos da as posições de top, left, right, bottom do elemento e outras informações</p>
+        <p>EX: <br><br>
+            let elTeste = document.getElementById('titulo'); <br>
+            console.log(elTest.getBoundingClientRect());<br>
+        </p>
+        <h2>Alterando CSS com DOM Estilizando com JS</h2>
+        <p>Podemos mudar também as propriedades de estilo dos elementos do HTML com o JS, acessando a propriedade style podemos fazer as modificações manipulando diretamente a tag, ou seja substituir o (stylo) do CSS na maioria das vezes.</p>
+        <p>EX: <br><br>
+            let p = document.getElementById('algum-p');<br>
+            console.log(p.style);<br>
+            p.style.color = 'red';<br>
+        </p>
+        <h2>Selecionando vários elementos com Query</h2>
+        <p>Para selecionar diversos elemntos com query podemos utilizar o método querySelectorAll, em vez de um, podemos pegar todos o elementos semelhantes com seletor do CSS.</p>
+        <p>EX: <br><br>
+            let todosPs = document.querySelectorAll('p');<br>
+            console.log(todosPs);<br>
+            console.log(count(todosPs));
         </p>
     </main>
     <footer>
