@@ -4,34 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="script1.js"></script>
     <title>Funções</title>
 </head>
 <body>
-    <h1>Funções</h1>
-    <p>Funções são estruturas de códigos menores que são reaproveitadas durante a execução/construção de um programa.</p>
-    <p>Principal objetivo é poupar repetições de código e podem ser consideradas <strong>'subprogramas'</strong>.</p>
-    <p>Uma função tem uma estrutura um pouco mais complexa, deve ser declarada com a palavra reservada <strong>FUNCTION</strong> e essa função deve ter um nome, contendo argumentos/parâmetros, definitos entre "()" o corpo da função é definido entre chaves "{}", geralmente uma função retorna um valor, sendo pssível também declarar funções em variáveis.</p>
-    <p>
-        EX: <br><br>
-        function escreverNoConsole() { <br>
-            console.log("Escrever no console!") <br>
-        } <br>
-        escreverNoConsole(); <br>
-        const textoNoConsole = function() { <br>
-            console.log("Texto no console!") <br>
-        } <br>
-        textoNoConsole(); <br>
-        const textoPorParametro = function(texto) { <br>
-            console.log(texto); <br>
-        } <br>
-        textoPorParametro("Testando por parâmetro!")
-    </p>
-    <p>Três tipos de utilização da função</p>
-    <ul>
-        <li>Normal sem argumentos.</li>
-        <li>Com argumentos.</li>
-        <li>Anonima atrelada a uma variável.</li>
-    </ul>
+    <header id="container-principal">
+        <h1>Funções</h1>
+    </header>
+    <main id="container-secundario">
+        <p>Funções são estruturas de códigos menores que são reaproveitadas durante a execução/construção de um programa.</p>
+        <p>Principal objetivo é poupar repetições de código e podem ser consideradas <strong>'subprogramas'</strong>.</p>
+        <p>Uma função tem uma estrutura um pouco mais complexa, deve ser declarada com a palavra reservada 
+        <strong>FUNCTION</strong> e essa função deve ter um nome, contendo argumentos/parâmetros, definitos entre "()" o corpo da função é definido entre chaves "{}", geralmente uma função retorna um valor, sendo pssível também declarar funções em variáveis.</p>
+        <p>EX: <br><br>
+            function escreverNoConsole() { <br>
+                console.log("Escrever no console!") <br>
+            } <br>
+            escreverNoConsole(); <br>
+            const textoNoConsole = function() { <br>
+                console.log("Texto no console!") <br>
+            } <br>
+            textoNoConsole(); <br>
+            const textoPorParametro = function(texto) { <br>
+                console.log(texto); <br>
+            } <br>
+            textoPorParametro("Testando por parâmetro!")
+        </p>
+        <p>Três tipos de utilização da função</p>
+            <ul>
+                <li>Normal sem argumentos.</li>
+                <li>Com argumentos.</li>
+                <li>Anonima atrelada a uma variável.</li>
+            </ul>
+    </main>
+    <footer>
+    <p>Site criado por <a href="https://github.com/JONATHASROSA" target="_blank">&copy;JonathasRosaDev</a>.</p>
+    </footer>
 </body>
 </html>

@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}*/
+}
 body {
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 315px;
-    height: 500px;
+    height: 2250px;
     box-shadow: rgba(0, 0, 0, 0.555) 0px 7px 29px 0px;
     margin: 8px;
     padding: 14px;

@@ -9,44 +9,46 @@
     <title>Estrutura de controle</title>
 </head>
 <body>
-    <h1>Estruturas de controle</h1>
-    <p>Estruturas de controle significa que o código é executado de cima para baixo, com as <strong>estruturas</strong> podemos modelar o fluxo do programa, ou seja, dependendo dos valores de <strong>statements</strong> e <strong>expressions</strong>, ele tomará caminhos diferentes.</p>
-    <h2>IF</h2>
-    <p>O programa vai exeutar um bloco de código, <strong>SE</strong> algo acontecer.</p>
-    <p>Onde algo é a condição imposta por um statement.</p>
-    <p>onde o resultado é um booleans(true or false).</p>
-    <p>
-        let idade =19;<br>
-        if(idade > 18) {<br>
-            console.log('Pode entrar');<br>
-        }
-    </p>
-    <h2>ELSE</h2>
-    <p>O bloco de código <strong>else</strong> é sempre utilizado com o bloco <strong>if</strong> caso a instrução do bloco <strong>if</strong> não seja atendida, ou seja, se não executar o bloco <strong>if</strong>, execute o bloco <strong>else</strong>.</p>
-    <p>
-        let nome = 'jonathas'
-
-        if(nome == 'João') {
-            console.log(`Seu nome é ${nome}.`)
-        } else {
-            console.log('O seu nome não é João')
-        }
-    </p>
-    <h2>Else If</h2>
-    <p>Pode também chamar condições como <strong>else if</strong>, ou seja antes de executar um else, ou até mesmo sem ele podemos verificar mais de uma condição</p>
-    <p> 
-        let a = 5;
-        let b = 3;
-
-        if (a + b == 3) {
-            console.log('O resultado é 3');
-        }else if (a == 4) {
-            console.log('O valor de a é 4');
-        }else if (b == 3) {
-            console.log('O valor de b é 3');
-        } else {
-            console.lg('Nenhuma das condições acima!');
-        }
-    </p>
+    <header id="container-principal">
+        <h1>Estruturas de controle</h1>
+    </header>
+    <main id="container-secundario">
+        <p>Estruturas de controle significa que o código é executado de cima para baixo, com as <strong>estruturas</strong> podemos modelar o fluxo do programa, ou seja, dependendo dos valores de <strong>statements</strong> e <strong>expressions</strong>, ele tomará caminhos diferentes.</p>
+        <h2>IF</h2>
+        <p>O programa vai exeutar um bloco de código, <strong>SE</strong> algo acontecer.</p>
+        <p>Onde algo é a condição imposta por um statement.</p>
+        <p>onde o resultado é um booleans(true or false).</p>
+        <p>EX: <br> 
+            let idade =19;<br>
+            if(idade > 18) {<br>
+                console.log('Pode entrar');<br>
+            }</p>
+        <h2>ELSE</h2>
+        <p>O bloco de código <strong>else</strong> é sempre utilizado com o bloco <strong>if</strong> caso a instrução do bloco <strong>if</strong> não seja atendida, ou seja, se não executar o bloco <strong>if</strong>, execute o bloco <strong>else</strong>.</p>
+        <p>EX: <br>
+            let nome = 'jonathas' <br>
+            if(nome == 'João') { <br>
+                console.log(`Seu nome é ${nome}.`) <br>
+            } else { <br>
+                console.log('O seu nome não é João') <br>
+            }</p>
+        <h2>Else If</h2>
+        <p>Pode também chamar condições como <strong>else if</strong>, ou seja antes de executar um else, ou até mesmo sem ele podemos verificar mais de uma condição</p>
+        <p> EX: <br><br>
+            let a = 5;<br>
+            let b = 3; <br>
+            if (a + b == 3) { <br>
+                console.log('O resultado é 3'); <br>
+            }else if (a == 4) { <br>
+                console.log('O valor de a é 4'); <br>
+            }else if (b == 3) { <br>
+                console.log('O valor de b é 3'); <br>
+            } else { <br>
+                console.lg('Nenhuma das condições acima!'); <br>
+            } </p>
+    </main>
+    <footer>
+    <p>Site criado por <a href="https://github.com/JONATHASROSA" target="_blank">&copy;JonathasRosaDev</a>.</p>
+    </footer>
 </body>
 </html>

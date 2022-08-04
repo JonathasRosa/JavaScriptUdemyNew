@@ -4,69 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="identacao.html"></script>
     <title>Identação</title>
 </head>
 <body>
-    <h1>Identação</h1>
-    <p>Serve para organizar o código e deixá-lo mais legível e para a execução do código não afeta em nada.</p>
-    <p>
-        let x = 2; <br>
-        let y = 0: <br><br>
-
-        if ( x > 2) {<br>
-             y = x + 2;<br>
-             if (y == 4) {<br>
+    <header id="container-principal">
+        <h1>Identação</h1>
+    </header>
+    <main id="container-secundario">
+        <h2>Para que serve a Identação</h2>
+        <p>Serve para organizar o código e deixá-lo mais legível e para a execução do código não afeta em nada.</p>
+        <p>EX: <br><br>
+            let x = 2; <br>
+             let y = 0: <br><br>
+            if ( x > 2) {<br>
+            y = x + 2;<br>
+            if (y == 4) {<br>
                 console.log('y é 4');<br>
             } <br>
-        }
-    </p>
-    <h1>Break</h1>
-    <p>É uma ferramenta utilizada para força uma parada no loop, antes de ele terminar o processo</p>
-    <p>
-        for(let  = 5; i < 20; i = i + 1) { <br>
-            if(i % 10 == 0) { <br>
-                console.log('Saiu do loop'); <br>
+        }</p>
+        <h2>Break</h2>
+        <p>É uma ferramenta utilizada para força uma parada no loop, antes de ele terminar o processo</p>
+        <p> EX: <br><br>
+            for(let  = 5; i < 20; i = i + 1) { <br>
+                if(i % 10 == 0) { <br>
+                    console.log('Saiu do loop'); <br>
                 break; <br>
-            } <br>
-            console.log('Prosseguindo o loop') <br>
-        } <br>
-    </p>
-    <h1>Continue</h1>
-    <p>Dependo da nossa lógica, podemos pular um determinado "bloco" de execução, dando assim continuidade ao restante do execução.</p>
-    <p>
-        let x = 0 <br><br>
-        while(x < 1) {<br>
-            x = x + 1; <br>
-            if(x % 2 == 0) {<br>
+                } <br>
+             console.log('Prosseguindo o loop') <br>
+            } <br></p>
+        <h2>Continue</h2>
+        <p>Dependo da nossa lógica, podemos pular um determinado "bloco" de execução, dando assim continuidade ao restante do execução.</p>
+        <p>
+            let x = 0 <br><br>
+            while(x < 1) {<br>
+                x = x + 1; <br>
+                if(x % 2 == 0) {<br>
                 continue; <br>
-            } <br>
+                } <br>
             console.log(x); <br>
-            x = x + 1; <br>
-        }
-    </p>
-    <h1>Incrementação</h1>
-    <p>É uma forma resumida de atribuir um valor à uma variável: x += 1 para x++ ou x--</p>
-    <p>
-        for (let numero = 0; numero < 10; numero += 1) {<br>
-            console.log("O numero é: + numero");
-        }
-    </p>
-    <h1>Switch</h1>
-    <p>Quando exite a necessidade de utilisar vários "ifs", podemos utilizar o <strong>switch/case</strong>, para sair de uma switch/case utiliza-se o breack e podemos utilizzar uma expressão <strong>default</strong> para caso nenhum valor for correspondido</p>
-    <p>Obs: Maioria dos programadores preferem usar vários ifs.</p>
-    <p>
-        switch(nome) {<br>
-            case "João": <br>
-            console.log("O nome é João"); <br>
-            break; <br>
-            case "Marcos"; <br>
-            conslo.log("O seu nome é Marcos"); <br>
-            break; <br>
-            default: <br>
-            console.log("O seu nome não é João nem Marcos"); <br>
-            break; <br>
-        }
-    </p>
+                x = x + 1; <br>
+            }</p>
+        <h2>Incrementação</h2>
+        <p>É uma forma resumida de atribuir um valor à uma variável: x += 1 para x++ ou x--</p>
+        <p>EX: <br><br>
+            for (let numero = 0; numero < 10; numero += 1) {<br>
+                console.log("O numero é: + numero");
+            }
+        </p>
+        <h2>Switch</h2>
+        <p>Quando exite a necessidade de utilisar vários "ifs", podemos utilizar o <strong>switch/case</strong>, par sair de uma switch/case utiliza-se o breack e podemos utilizzar uma expressão <strong>default</strong> para  caso nenhum valor for correspondido</p>
+        <p>Obs: Maioria dos programadores preferem usar vários ifs.</p>
+        <p>EX: <br><br>
+            switch(nome) {<br>
+                case "João": <br>
+                console.log("O nome é João"); <br>
+                break; <br>
+                case "Marcos"; <br>
+                conslo.log("O seu nome é Marcos"); <br>
+                break; <br>
+                default: <br>
+                console.log("O seu nome não é João nem Marcos"); <br>
+                break; <br>
+            }</p>
+    <footer>
+        <p>Site criado por <a href="https://github.com/JONATHASROSA" target="_blank">&copy;JonathasRosaDev</a>.</p>
+    </footer>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -25,6 +26,7 @@ body {
     width: 315px;
     height: 100px;
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.555) 0px 7px 29px 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,7 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 315px;
-    height: 840px;
+    height: 700px;
     box-shadow: rgba(0, 0, 0, 0.555) 0px 7px 29px 0px;
     margin: 8px;
     padding: 14px;

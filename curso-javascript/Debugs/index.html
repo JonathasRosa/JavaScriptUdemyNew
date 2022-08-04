@@ -9,42 +9,45 @@
     <title>Debugs</title>
 </head>
 <body>
-    <h1>O que é bug e debug?</h1>
-    <p><strong>Bug</strong> é um problema que ocorre no código, muitas vezes por erro do programador, que impede o funcionamento correto do mesmo.</p>
-    <p><strong>Debug</strong> é o ato de resolver os bugs encontrados no código ou também a forma que é feita a visualização de valores de variáveis ou fluxo do código.</p>
-    <h2>Strict mode</h2>
-    <p>Deixao JavaScript mais rigoroso na hora de programar, devendo ser declarado no topo do arquivo ou função.</p>
-    <p>Colocar o strict ajuda você a codificar de forma correta e não vai impedir ou limitar em nada o seu software ou program.</p>
-    <p>Veja um exemplo de uma variável declarada sem let/const/var. <br>
-        EX: <br>
-        "use strict" <br>
-        opa = 'teste'; <br>
-        <ul>
-            <li>uncaught referenceErro: opa is not defined at window.onload(.(index):34)</li>
-        </ul>
-    </p>
-    <h2>Debugs com console.log</h2>
-    <p>O meto bstante utilizado para debugs é o console.log, uma função que é utilizada apara mostrar os valores no console.</p>
-    <p>EX: <br>
-        let a = 1; <br>
-        let b = 2; <br>
-        if(a == 1) { <br>
-            a = b + 2; <br>
-        } <br>
-        console.log(a); <br>
-        for(i = 0; i < b; i++) { <br>
-            a = a + 2; <br>
-            console.log(a); <br>
-        } <br>
-        if(a > 10) { <br>
-            a == 25; <br>
-        }
-    </p>
-    <h2>Debug com debugger</h2>
-    <p>É uma funcionalidade que para o código quando atingir a linha debugger ou com erro. É bem mais eficiente e elegante visualmente.</p>
-    <p>EX: <br>
-        let a = 1; <br>
-        let b = 2; <br> <br>
+    <header id="container-principal">
+        <h1>O que é bug e debug?</h1>
+    </header>
+    <main id="container-secundario">
+        <p><strong>Bug</strong> é um problema que ocorre no código, muitas vezes por erro do programador, que impede o funcionamento correto do mesmo.</p>
+        <p><strong>Debug</strong> é o ato de resolver os bugs encontrados no código ou também a forma que é feita a visualização de valores de variáveis ou fluxo do código.</p>
+        <h2>Strict mode</h2>
+        <p>Deixao JavaScript mais rigoroso na hora de programar, devendo ser declarado no topo do arquivo ou função.</p>
+        <p>Colocar o strict ajuda você a codificar de forma correta e não vai impedir ou limitar em nada o seu software ou program.</p>
+        <p>Veja um exemplo de uma variável declarada sem let/const/var. <br>
+            EX: <br>
+            "use strict" <br>
+            opa = 'teste'; <br>
+            <ul>
+                <li>uncaught referenceErro: opa is not defined at window.onload(.(index):34)</li>
+            </ul>
+        </p>
+        <h2>Debugs com console.log</h2>
+        <p>O meto bstante utilizado para debugs é o console.log, uma função que é utilizada apara mostrar os valores no console.</p>
+        <p>EX: <br>
+            let a = 1; <br>
+            let b = 2; <br>
+            if(a == 1) { <br>
+                a = b + 2; <br>
+            } <br>
+                console.log(a); <br>
+            for(i = 0; i < b; i++) { <br>
+                a = a + 2; <br>
+                console.log(a); <br>
+            } <br>
+            if(a > 10) { <br>
+                a == 25; <br>
+            }
+        </p>
+        <h2>Debug com debugger</h2>
+        <p>É uma funcionalidade que para o código quando atingir a linha debugger ou com erro. É bem mais eficiente e elegante visualmente.</p>
+        <p>EX: <br>
+            let a = 1; <br>
+            let b = 2; <br> <br>
         if (a == 1) { <br>
             a = b + 2; <br>
         } <br>
@@ -55,12 +58,12 @@
         if (a > 10) { <br>
             a == 25; <br>
         }
-    </p>
-    <h2>Tratamento de input por função</h2>
-    <p>Não podemos controlar os dados que o usuário enviar, então para o bom funcionamento do software, devemos tratar eles.</p>
-    <p>Vejamos um exemplo de tratamento de um number:</p>
-    <p>EX: <br>
-        function checarNumero(valor) { <br>
+        </p>
+        <h2>Tratamento de input por função</h2>
+        <p>Não podemos controlar os dados que o usuário enviar, então para o bom funcionamento do software, devemos tratar eles.</p>
+        <p>Vejamos um exemplo de tratamento de um number:</p>
+        <p>EX: <br>
+            function checarNumero(valor) { <br>
             let resultado = Number(valor); <br>
             if(Number.isNaN(resultado)) { <br>
                 return null; <br>
@@ -70,48 +73,49 @@
         } <br>
         console.log(checarNumero(5)); <br>
         console.log(checarNumero('teste'));
-    </p>
-    <h2>Exceptions</h2>
-    <p>Podemos criar erros no programa, caso alguma condição não seja atendida, porém as <strong>exceptions</strong> só geram o erro.</p>
-    <p>EX: <br>
-        let a = 1;
-        if (a != 2) {
-            throw new Erro("O valor de a não pode ser 1")
-        }
-        <ul><li>uncaught Erro: O valor de a não pode ser 1 at window.onload(.(index):36)</li></ul>
-    </p>
-    <h2>Try and catch</h2>
-    <p>O bloco try catch, vai tentar executar um código, caso não consiga, ele pode retornar o erro que esse código gerou, sendo assim muito útil para debug.</p>
-    <p>EX: <br><br>
-    try { <br>
-        let c = a + b; <br>
-    } catch(erro) { <br>
-        console.log("Algo deu errado: " + error); <br>
-    } <br>
-    </p>
-    <h2>Finally</h2>
-    <p>Finally é executada independente do resultado do try/catch, podendo exixtir com try e catch ou apenas com try.</p>
-    <p>EX: <br> <br>
+        </p>
+        <h2>Exceptions</h2>
+        <p>Podemos criar erros no programa, caso alguma condição não seja atendida, porém as <strong>exceptions</strong> só geram o erro.</p>
+        <p>EX: <br>
+            let a = 1;
+            if (a != 2) {
+                throw new Erro("O valor de a não pode ser 1")
+            }
+            <ul>
+                <li>uncaught Erro: O valor de a não pode ser 1 at window.onload(.(index):36)</li>
+            </ul>
+        </p>
+        <h2>Try and catch</h2>
+        <p>O bloco try catch, vai tentar executar um código, caso não consiga, ele pode retornar o erro que esse código gerou, sendo assim muito útil para debug.</p>
+        <p>EX: <br><br>
         try { <br>
             let c = a + b; <br>
-        } catch(error) { <br>
+        } catch(erro) { <br>
             console.log("Algo deu errado: " + error); <br>
-        } finally { <br>
-            console.log("Executor") <br>
-        } 
-    </p>
-    <h2>Assertion</h2>
-    <p>Verificações de programas, que são utilizadas para assegurar que tudo ocorra da forma esperada.</p>
-    <p>EX:<br> <br>
-        function iterarArray(arr) { <br>
-            if(arr.length == 0) { <br>
-                throw new Error("O array precisa ter elementos"); <br>
-            } else { <br>
-                for(let i = 0; i < arr.length; i++) { <br>
-                    console.log(arr[i]); <br>
-                } <br>
-            } <br>
         } <br>
-    </p>
+        </p>
+        <h2>Finally</h2>
+        <p>Finally é executada independente do resultado do try/catch, podendo exixtir com try e catch ou apenas com try.</p>
+        <p>EX: <br> <br>
+            try { <br>
+                let c = a + b; <br>
+            } catch(error) { <br>
+                console.log("Algo deu errado: " + error); <br>
+            } finally { <br>
+                console.log("Executor") <br>
+            } </p>
+        <h2>Assertion</h2>
+        <p>Verificações de programas, que são utilizadas para assegurar que tudo ocorra da forma esperada.</p>
+        <p>EX:<br> <br>
+            function iterarArray(arr) { <br>
+                if(arr.length == 0) { <br>
+                    throw new Error("O array precisa ter elementos"); <br>
+                } else { <br>
+                    for(let i = 0; i < arr.length; i++) { <br>
+                        console.log(arr[i]); <br>
+                    } <br>
+                } <br>
+            } <br></p>
+    </main>
 </body>
 </html>
