@@ -19,7 +19,7 @@ body {
     min-height: 100vh;
 }
 
-#container-principal {
+#titulo-principal {
     background-color: yellow;
     border: 5px solid white;
     border-radius: 20px;
@@ -31,7 +31,7 @@ body {
     padding: 12px;
 }
 
-#container-secundario {
+#container {
     background-color: transparent;
     border-radius: 20px;
     background: hsl(0, 0%, 100%);
