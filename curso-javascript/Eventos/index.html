@@ -54,7 +54,86 @@
             <button id="btn5">Clicou em mim!</button>.
         </p>
         <button id="btn6">Remove evento.</button>
-         <p id="finalcontainer">Site de pesquisa de JavaScript criado por <a href="https://github.com/JONATHASROSA" target="_blank">&copy;JonathasRosaDev</a>.</p>
+        <h2>Ações default</h2>
+        <p>Muito elementos/teclas já tem suas ações pré-definidas, como clicar num link que nos leva a outra página, mas podemos para este evento <strong>default</strong> e criar uma lógica diferente para elemento em questão.</p>
+        <p>EX: <br> <br>
+            let a = document.querySelector('a'); <br>
+            a.addEventListener('click', function(e) {<br>
+                e.preventDefault();<br>
+                console.log("clicou mas não mudou de link");<br>
+            })
+        </p>
+        <div>
+            <a href="https://github.com/JONATHASROSA" target="_blank">MyGithub</a>
+        </div>
+        <h2>Eventos de tecla - Keyup e keydown</h2>
+        <p>Sempre que uma tecla é pressionada, são gerados dois eventos, <strong>keyup/keydown</strong>, com isso podemos realizar ações nestes eventos também.</p>
+        <p>EX: <br><br>
+            window.addEventLitener("keydown", function(e) {<br>
+                if(e.key == "y"){<br>
+                    console.log("Apertou a tecla y");<br>
+                } <br>
+            });
+        </p>
+        <h2>Eventos de mouse</h2>
+        <p>No mouse temos também eventos como mouseup e mousedown, semelhante aos da teclas, também temos o <strong>Dblclick</strong> que podemos ativar um evento com clickduplo.</p>
+        <p>EX: <br><br>
+            btn = document.querySelector("button");<br>
+            btn.addEventListener("dblclick", function() {<br>
+                console.log("Ativou o double click");<br>
+            });
+        </p>
+        <button id="btn7">Click</button>
+        <button id="btn8">Click</button>
+        <h2>Movimento do Mouse</h2>
+        <p>Também podemos atvar eventos com a movimentação do mouse, o nome dele é <strong>mousemove</strong> através desse evento podemos detectar a posição do ponteiro do mouse na tela, muito <strong>CUIDADO</strong> pois ele pode sobrecarreagara a memória do computador, uma vez que o JavaScript utiliza o computador do cliente como recurso para ser executado. Porém é um evento muito interessante pos podemos atrelar eventos em posições específicas quando o mouse passar em determinado local.</p>
+        <p>EX: <br><br>
+            window.addEventListener("mousemove", function(e) {<br>
+                console.log(e.x);<br>
+                console.log(e.y);<br>
+            });
+        </p>
+        <h2>Eventos por Scroll</h2>
+        <p>Podemos atrelar eventos ao scroll da tela também. pelo evento <strong>scroll</strong>, podemos criar um elemento assim que o o scroll atigir uma posição "X".</p>
+        <p>EX: <br><br>
+            window.addEventListenert ("scroll", function(e) { <br>
+                if(window.pageYOffset > 100) { <br>
+                    console.log("Chegou na posição"); <br>
+                } <br>
+            });
+        </p>
+        <div id="tamanho">Testando Scroll /150px</div>
+        <h2>Eventos por Foco</h2>
+        <p>Quando focamos em um elemento ou saimos dele, podemos também atrelar um evento a esta ação. <strong>Focus</strong> quando um elemento recebe o foco e <strong>blur</strong> quando ele perde o foco.</p>
+        <p>EX: <br><br>
+            let input = document.querySelector("input");<br>
+            input.addEventListener("focus", function (){<br>
+                console.log("foco no input");<br>
+            });<br><br>
+            input.addEventListener("blur", function (){<br>
+                console.log("perdeu o foco");<br>
+            });
+        </p>
+        <div>
+            <input id="input1" type="text">
+            <input id="input2" type="text">
+        </div>
+        <h2>Evento de carregamento</h2>
+        <p>Podemos atrelar um evento quando a página carregar, pelo <strong>load</strong> e antes do usuário fechar a página pelo evento <strong>beforeunload</strong>.</p>
+        <p>EX: <br>
+            window.addEventListener("beforeunload", function(e){ <br><br>
+
+            })  
+        </p>
+        <h2>Debouce</h2>
+        <p>Um evento que dispara múltiplas vezes pode ser um problema para o computador do cliente, por isso podemos fazer um <strong>debounce</strong> que é um suavizador de evento, para não chamar a atençãodo usuário muitas vezes.</p>
+        <p>EX: <br><br>
+            windo.addEventListener("mouse", function() {<br>
+                clearTimeout(timeout); <br>
+                timeout = setTimeout(() => console.log("Debounce!"), 500); <br>
+            });
+        </p>
+        <p id="finalcontainer">Site de pesquisa de JavaScript criado por <a href="https://github.com/JONATHASROSA" target="_blank">&copy;JonathasRosaDev</a>.</p>
     </main>
     <script src="script.js"></script>
 </body>
