@@ -52,11 +52,10 @@ body {
 
 h2 {
     align-items: center;
-    font-weight: 700;
     font-size: 21px;
     font-family: 'Outfit', sans-serif;
     text-align: center;
-    padding: 1px;
+    margin: 2px;
     color: hsl(218, 44%, 22%);
 }
 

@@ -28,8 +28,9 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
-
 #container {
     border-radius: 20px;
     background: hsl(0, 0%, 100%);
@@ -44,23 +45,21 @@ body {
     margin-top: 12px;
     padding: 10px;
     border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
-
 h2 {
     align-items: center;
-    font-weight: 700;
     font-size: 21px;
     font-family: 'Outfit', sans-serif;
     text-align: center;
-    padding: 1px;
+    margin: 2px;
     color: hsl(218, 44%, 22%);
 }
-
 p {
-    font-weight: 400;
     font-size: 14px;
     font-family: 'Outfit', sans-serif;
     text-align: justify;
-    padding: 1px;
     color: black;
+    margin: 2px;
 }

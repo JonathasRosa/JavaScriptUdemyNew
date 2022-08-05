@@ -15,8 +15,46 @@
         <h1 id="titulo-principal">Eventos - JS</h1>
         <h2>O que são eventos?</h2>
         <p>Eventos são ações condicionadas a algum tipo de resposta feita pelo usuário, por exemplo: clicks, apertar alguma tecla ou até movimento do mouse. POdemos atrelar lógica a essas ações do usuário, por meio de handlers.</p>
-        <p></p>
-        <p id="finalcontainer">Site criado por <a href="https://github.com/JONATHASROSA" target="_blank">&copy;JonathasRosaDev</a>.</p>
+        <h2>Como criar um evento</h2>
+        <p>Devemos atrelar o evento a um elemento, por exemplo um botão, depois inserir um <strong>listener</strong> e um tipo de evento como argumento, ai o elemento responderá por este evento e obviamente, os outros da página não.</p>
+        <p>EX: <br><br>
+            let bnt = document.querySelector("#bnt"); <br>
+            bnt.addEventListener("click", () => { <br>
+                console.log("clicou"); <br>
+            });
+        </p>
+        <button>Clicou em mim!</button>
+        <h2>Removendo eventos</h2>
+        <p>Da mesma forma que podemos adicionar eventos, podemos remover quando achamos necessário. Para isso utilizamos o método <strong>removeEventListener</strong>, onde passamos o evento  e a função que o evento está escutando.</p>
+        <p>EX: <br><br>
+            let btn = document.querySelector("#btn"); <br>
+            function msg() { <br>
+                console.log("clicou"); <br>
+            } <br>
+            btn.addEventListener("click", msg); <br>
+            setTimeout(function() { <br>
+                btn.removeEventListener("click", msg);<br>
+            }, 3000);<br>
+        </p>
+        <button id="btn1">Clicou em mim!</button>
+        <button id="btn2">Remove evento.</button>
+        <h2>O Objeto do evento</h2>
+        <p>Quando criamos eventos, temos a opção de utilizar um argumento, que é chamado de <strong>objeto do evento</strong>. ele contem prorpiedades que podem ser utilizadasa nosso favor, esse objeto é criado pelo JavaScript automaticamente.</p>
+        <p>EX: <br>
+            function msg(e) { <br>
+                console.log(e); <br>
+            } <br>
+            btn.addEventListener("click", msg);
+        </p>
+        <button id="btn3">Clicou em mim!</button>
+        <button id="btn4">Remove evento.</button>
+        <h2>Propagação</h2>
+        <p>Quando não definimos um elemento muito bem(seletor brando) ou um elemento que está dentro de outro evento, pode acontecer a <strong>propagação</strong> que é um elemento ativando um evento de outro também, aí teremos uma duplicação. Para pararmos uma propagação e não acarretar uma série de problemas utilizamos o <strong>stopPropagation</strong>.</p>
+        <p id="p-ex"> EX: Um butão dentro do paragrafo
+            <button id="btn5">Clicou em mim!</button>.
+        </p>
+        <button id="btn6">Remove evento.</button>
+         <p id="finalcontainer">Site de pesquisa de JavaScript criado por <a href="https://github.com/JONATHASROSA" target="_blank">&copy;JonathasRosaDev</a>.</p>
     </main>
     <script src="script.js"></script>
 </body>
