@@ -41,13 +41,12 @@ body {
     display: flex;
     flex-direction: column;
     width: 315px;
-    height: 700px;
+    height: 225px;
     box-shadow: rgba(0, 0, 0, 0.555) 0px 7px 29px 0px;
     margin: 8px;
     padding: 14px;
 }
-
-#finalcontainer {
+#finalcontainer{
     text-align: center;
     background-color: rgb(255, 255, 0);
     margin-top: 12px;

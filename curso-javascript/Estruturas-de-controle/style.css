@@ -22,15 +22,13 @@ body {
 #container-principal {
     background-color: yellow;
     border: 5px solid white;
-    width: 315px;
-    height: 100px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 8px;
-    padding: 1px;
+    padding: 12px;
 }
 
 #container-secundario {
@@ -40,10 +38,16 @@ body {
     display: flex;
     flex-direction: column;
     width: 315px;
-    height: 840px;
     box-shadow: rgba(0, 0, 0, 0.555) 0px 7px 29px 0px;
     margin: 8px;
-    padding: 14px;
+    padding: 12px;
+}
+#finalcontainer {
+    text-align: center;
+    background-color: rgb(255, 255, 0);
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 h2 {
@@ -63,11 +67,4 @@ p {
     text-align: justify;
     padding: 1px;
     color: black;
-}
-
-footer {
-    text-align: center;
-    background-color: rgb(255, 255, 0);
-    padding: 12px;
-    margin: 12px;
 }

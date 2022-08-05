@@ -47,6 +47,14 @@ body {
     padding: 14px;
 }
 
+#finalcontainer {
+    text-align: center;
+    background-color: rgb(255, 255, 0);
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 h2 {
     align-items: center;
     font-weight: 700;
@@ -64,11 +72,4 @@ p {
     text-align: justify;
     padding: 1px;
     color: black;
-}
-
-footer {
-    text-align: center;
-    background-color: rgb(255, 255, 0);
-    padding: 12px;
-    margin: 12px;
 }
