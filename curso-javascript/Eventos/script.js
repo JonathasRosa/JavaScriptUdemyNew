@@ -125,9 +125,10 @@ window.addEventListener("beforeunload", function (e) {
 });
 */
 let timeout;
+
 window.addEventListener("mousemove", function (e) {
     clearTimeout(timeout);
-    timeout = setTimeout(fuction() {
-        console.log(e.x)
-    })
-})
+    timeout = setTimeout(function() {
+        console.log(e.x);
+    }, 500);
+});
