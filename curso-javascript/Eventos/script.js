@@ -124,6 +124,8 @@ window.addEventListener("beforeunload", function (e) {
     Event.returnValue = null;
 });
 */
+
+/* Debouce
 let timeout;
 
 window.addEventListener("mousemove", function (e) {
@@ -132,3 +134,4 @@ window.addEventListener("mousemove", function (e) {
         console.log(e.x);
     }, 500);
 });
+*/
