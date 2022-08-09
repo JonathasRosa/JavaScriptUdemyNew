@@ -1,0 +1,1 @@
+Texto de Teste utulizando terminal no Node.Js.
