@@ -8,6 +8,7 @@
 #menu ul {
     list-style: none;
     background-color: yellow;
+    max-width: 800px;
 }
 #menu ul li {
     display: inline;

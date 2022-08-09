@@ -1,0 +1,19 @@
+{
+  "name": "javascriptudemy",
+  "version": "1.0.0",
+  "description": "Curso JavaScript Udemi New",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JONATHASROSA/JavaScriptUdemyNew.git"
+  },
+  "author": "JonathasRosaDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JONATHASROSA/JavaScriptUdemyNew/issues"
+  },
+  "homepage": "https://github.com/JONATHASROSA/JavaScriptUdemyNew#readme"
+}
