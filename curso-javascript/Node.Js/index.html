@@ -29,11 +29,24 @@
         <img src="imagens/operacoes-no-terminal.png" alt="operacoes-no-terminal">
         <p>E para sair do terminal você aperta as teclas 'Crtl+C' duas vezes. <img src="imagens/encerrando-node.png" alt="encerrando-node"></p>
         <h2>O NPM</h2>
-        <p>O <strong>npm</strong> é uma ferramenta que gerência pacotes utilizada para instalar módulos de Java Script, que podem fazer desde operações matemáticas até comunicação HTTP com requisições. Instalamos um pacote pelo comando: <strong>npm install pacote</strong> que vem junto com o Node, porém tem um detalhe, quando instalamos dessa maneira instalamos ele de forma global, passando a ter uma dependência extra no computador, dependendo do projeto criado é interessante instalar cada versão de pacote de forma individual.</p>
+        <p>O <strong>NPM</strong> é uma ferramenta que gerência pacotes utilizada para instalar módulos de Java Script, que podem fazer desde operações matemáticas até comunicação HTTP com requisições. Instalamos um pacote pelo comando: <strong>npm install pacote</strong> que vem junto com o Node, porém tem um detalhe, quando instalamos dessa maneira instalamos ele de forma global, passando a ter uma dependência extra no computador, dependendo do projeto criado é interessante instalar cada versão de pacote de forma individual.</p>
         <h2>Iniciando um Projeto</h2>
-        <p>ATUALUZAR DEPOIS.</p>
+        <p>Sempre que formos iniciar um novo projeto, o certo é sempre baixar um novo <strong>PACK</strong> de NPM para o projeto, podendo ser criado pelo template, utilizando o comando <strong>npm init</strong> criando um <strong>packge.json</strong> servindo para configurações e salvar as dependências.</p>
+        <p>Com o terminal NODE aberto, vc vai iniciar com o comando 'npm init' e preencher os dados do projrto para deixá-lo mais organizado, com as seguintes informações: <br><br><img src="imagens/package.png" alt="infomações de package"></p>
+        <p>Quando iniciamos um novo projeto sempre que instalamos os pack's, todas as dependências do package.json são instaladas na máquina caso não tenha, isso é muito bom, pois não salva muitos arquivoa na máquina.</p>
         <h2>Módulo de File Sistem</h2>
-        <p>ATUALIZA DEPOIS</p>
+        <p>Módulos e pacotes são utilizados para um determonado fim e são muito utilizados, um deles é o <strong>file sistem</strong>, que serve para trabalhar com arquívos e diretórios(fazer qualquer tipo de alteração), ele tabém já é incluso no NODE, assim não precisamos instalar.</p>
+        <p></p>
+        <p>EX: <br><br>
+            let {readFile} = require('fs');<br>
+            readFile("arquivo.txt", "utf8" (error,text) => {<br>
+                if(error) {<br>
+                    throw error;<br>
+                } else {<br>
+                    console.log(text);<br>
+                }br
+            });
+        </p>
         <h2>Módulo HTTP</h2>
         
         <h2>O que é API</h2>

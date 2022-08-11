@@ -1,1 +1,1 @@
-Texto de Teste utulizando terminal no Node.Js.
+Texto de Teste utilizando terminal no Node.Js.
