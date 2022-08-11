@@ -36,7 +36,7 @@
         <p>Quando iniciamos um novo projeto sempre que instalamos os pack's, todas as dependências do package.json são instaladas na máquina caso não tenha, isso é muito bom, pois não salva muitos arquivoa na máquina.</p>
         <h2>Módulo de File Sistem</h2>
         <p>Módulos e pacotes são utilizados para um determonado fim e são muito utilizados, um deles é o <strong>file sistem</strong>, que serve para trabalhar com arquívos e diretórios(fazer qualquer tipo de alteração), ele tabém já é incluso no NODE, assim não precisamos instalar.</p>
-        <p></p>
+        <p>A função do pack, será inserido em variáveis em um script, e ela será utilizada no NODE.</p>
         <p>EX: <br><br>
             let {readFile} = require('fs');<br>
             readFile("arquivo.txt", "utf8" (error,text) => {<br>
@@ -44,13 +44,37 @@
                     throw error;<br>
                 } else {<br>
                     console.log(text);<br>
-                }br
+                } <br>
+            });
+        </p>
+        <img src="imagens/file-sistem.png" alt="file-sistem"> <br>
+        <p>Além de ler arquivos nós também podems escrever arquivos utilizando o File Sistem.</p>
+        <p>EX: <br><br>
+            writeFILE("arquivo.txt", "Inserir este texto", (error) => {<br>
+                is(error) {<br>
+                    console.log(error);<br>
+                } else {<br>
+                    console.log("Escreveu o arquivo");<br>
+                } <br>
             });
         </p>
         <h2>Módulo HTTP</h2>
-        
+        <p>O módulo HTTP também é muito utilizado e serve para criar <strong>servidores</strong>, também já vem com o NODE.</p>
+        <p>EX: <br><br>
+            const {createServe} = require("HTTP");<br>
+            let server = createServer((request, response) => { <br>
+                response.writeHead(200, {"Content-Type": "text/html"});<br>
+                response.write(`&lt;h1&gt;Hello Word!&lt;/h1&gt;<br>&lt;p&gt;Primaira página WEB com Node.JS&lt;/p&gt;`);<br>
+                response.end();<br>
+            });<br>
+            server.listen(8000);<br>
+            console.log("Listening! (port 8000)");
+        </p>
         <h2>O que é API</h2>
         <p>Application Programming Interface <strong>(API)</strong>, é uma maneira de se comunicar via HTTP a um servidor a fazer operações como: visualizar, deletar, criar e atualizar dados. Grandes aplicações como Facebook e Instagram utilizam APIs, grande parte dos sofwares desenvolvidas em Node.Js tem API e utilizam um framework chamado Express para isso.</p>
+        <h2>O que é REST e RESTful?</h2>
+        <p>Quando falamos em API estamos nos condicionando a <strong>REST</strong> e <strong>RESTful</strong>.</p>
+        <p><strong>REST</strong> = Representationl State Transfer, princípios e regras que permitem criar uma aplicação com interfaces bem definidas. <br><strong>RESTful</strong> = Capacidade de aplicar os princípios do REST.</p>
 
         <p id="finalcontainer">Site criado por <a href="https://github.com/JONATHASROSA" target="_blank">&copy;JonathasRosaDev</a>.</p>
     </main>
