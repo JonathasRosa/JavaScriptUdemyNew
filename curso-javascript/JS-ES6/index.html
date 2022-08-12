@@ -23,11 +23,199 @@
         <p>É uma versão "nova" de JavaScript que trouxe diversas funcionalidades, são os conhecimentos base para aprender os frameworkes modernos (React, Vue) e também agilizam muito o desenvolvimento de JS puro.</p>
         <h2>Variáves com let e const</h2>
         <p>Temos duas novas formas de declarar variáveis no ES6. A  <strong>let</strong> que é semelhante ao var, podemos alterar valores e a <strong>const</strong>, que é uma forma de declarar constantes. O grande diferencial é o <strong>escopo de blocos</strong>, não temos mais variáveis sendo 'vazadass para outros escopos por causa do mesmo nome.</p>
+        <p class="ex"> EX: <br>
+            var x = 10 <br>
+            var y = 15 <br>
+            if (y > 10) { <br>
+                var x = 5 <br>
+                console.log(x) <br>
+            } <br>
+            console.log(x) <br><br>
+            let a = 10 <br>
+            let b = 15 <br>
+            if (b > 10) { <br>
+            let a = 5 <br>
+            console.log(a) <br>
+            } <br>
+            console.log(a) <br><br>
+            let i = 100 <br>
+            for (let i = 0; i < 5; i++) { <br>
+                console.log(i) <br>
+            } <br>
+            console.log(i) <br><br>
+            function logName() { <br>
+                const name = 'Jonathas' <br>
+                console.log(name) <br>
+            } <br>
+            const name = "João" <br>
+            logName() <br>
+            console.log(name) 
+        </p>
         <h2>Arrow Functions</h2>
         <p>A arrow function é um recurso para criar funções de forma mais simples, mas ela não funciona exatamente como uma function em todos os aspectos, O this da arrow function é relacionado ao elemento pai de quem está a executando.</p>
-        <h2>Filter</h2>
-        <p></p>
+        <p class="ex">EX: <br><br>
+            const sum = function sum(a, b) { <br>
+                return a + b <br>
+            } <br>
+            const arrowSum = (a, b) => a + b <br>
+            console.log(sum(5, 5)) <br>
+            console.log(arrowSum(5, 5)) <br><br>
+            const greeting = (name) => {<br>
+                if (name) { <br>
+                    console.log(`Olá ${name}!`)     <br>
+                } else { <br>
+                    console.log('Olá') <br>
+                } <br>
+                } <br>
+            console.log(greeting('Jonathas')) <br>
+            console.log(greeting()) <br><br>
+            const testeArrow = () => console.log('Testou!') <br>
+            testeArrow() <br><br>
+            const user = { <br>
+                name: "João", <br>
+                sayUserName() { <br>
+                    var self = this <br>
+                    setTimeout(function () { <br>
+                console.log(self) <br>
+                console.log('Username: '+ self.name) <br>
+                }, 500) <br>
+                }, <br>
+            sayUserNameArrow() { <br>
+                setTimeout(() => { <br>
+                console.log(this) <br>
+                console.log('Username:' + this.name) <br>
+                }, 700) <br>
+                }, <br>
+            } <br>
+            user.sayUserName() <br>
+            user.sayUserNameArrow()
+        </p>
+        <h2>O Método Filter</h2>
+        <p>O método <strong>Filter</strong> serve para filtrar dados baseando em alguma condição que estabelecemos. Isso no sdá uma array com apenas os elementos que queremos, de forma performática.</p>
+        <p class="ex"> EX: <br><br>
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9] <br>
+                console.log(arr) <br>
+        const highNumbers = arr.filter((n) => { <br>
+            if (n >= 3) { <br>
+                return n <br>
+        } <br>
+        }) <br>
+        console.log(highNumbers) <br><br>
+        const users = [ <br>
+                { name: "Jonathas", available: true }, <br>
+                { name: "Jefferson", available: false }, <br>
+                { name: "João", available: false }, <br>
+                { name: "Junior", available: true}, <br>
+        ] <br>
+        const availableUsers = users.filter((user) => user.available) <br>
+        const notAvailableUsers = users.filter((user) => !user.available) <br><br>
+        console.log(availableUsers) <br>
+        console.log(notAvailableUsers)
 
+        </p>
+        <h2>O método MAP</h2>
+        <p>O <strong>MAP</strong> é um método de array também, que percorre todos os elementos, quando utilizamos o MAP, estamos querendo modificar os dados do array.</p>
+        <p class="ex"> EX: <br>
+            const products = [ <br>
+            { name: 'Camisa', price:10.99, category:'Roupas'}, <br>
+            { name: 'Chaleira Elétrica', price:49.99, category:'Eletro'}, <br>
+            { name: 'Fogão', price:400.00, category:'Eletro'}, <br>
+            { name:'Calça Jeans', price:50.99, category:'Roupas'} <br>
+            ] <br>
+            products.map((product) => { <br>
+                if (product.category === 'Roupas') { <br>
+                    product.onSale = true <br>
+                } <br>
+            }) <br>
+            console.log(products)
+        </p>
+        <h2>Templates literals</h2>
+        <p>O recurso de <strong>template literals</strong> permite uma string de forma mais simlpes, podemos colocar as variáveis entre textos, a string fica entre: `texto`. As strings são colocadas desta maneira: ${variavel}.</p>
+        <p class="ex"> EX: <br><br>
+            const userName = 'Jonathas' <br>
+            const age = 36 <br>
+            console.log(`O nome do usuário${userName} e ele tem ${age}.`)
+        </p>
+        <h2>Destructuring</h2>
+        <p>O <strong>Destructuring</strong> é um recurso que pode ser utilizado em arrays e objetos e a ideia é transformar os itens de um desses dados em variáveis, simplifivando a declaração de 'n' variáveis para apenas 1 linha.</p>
+        <p class="ex"> EX: <br><br>
+           const fruits = ['maça', 'laranja', 'Mamão'] <br>
+           const [f1, f2, f3] = fruits <br>
+           console.log(f1) <br>
+           console.log(f2) <br>
+           console.log(f3) <br>
+           const productDetails = {<br>
+            name:'mouse', <br>
+            price:39.99, <br>
+            category: 'periférico', <br>
+            color: 'cinza'<br>
+            } <br>
+            const { <br>
+                name:productName,<br>
+                price, <br>
+                category: productyCategory, <br>
+                color, <br>
+            } = productDetails <br>
+            console.log(`O nome do produto é ${productName}, custa R$${price}, pertence a categoria ${productyCategory} de cor ${color}.`) 
+        </p>
+        <h2>Spread operator</h2>
+        <p>O <strong>Spread</strong> pode ser utilizado também em arrays e objetos, utilizamos para construir novos valores destes dados em outros arrays e objetos, ou seja, podemos unir vários arrays de maneira simples ou adicionar valores de um objeto a outro.</p>
+        <p class="ex">EX: <br>
+            const a1 = [1, 2, 3] <br>
+            const a2 = [7, 8, 9] <br>
+            const a3 = [...a1, ...a2] <br>
+            console.log(a3) <br>
+            const a4 = [...a1, 4, 5, 6, ...a2] <br>
+            console.log(a4) <br>
+            const carName = { name:  'Punto'} <br>
+            const carBrand = { brand: 'Fiat'} <br>
+            const otherInfos = { km: 10000, price: 49000 } <br>
+            const car = {...carName, ...carBrand, ...otherInfos} <br>
+            console.log(car)
+        </p>
+        <h2>Classes em JS</h2>
+        <p>As classes são recursos fundamentais para programas com orientação a objetos, agora no JavaScript tem este recurso implementando, onde temos acesso a: constructor, propriedades, métodos e mais. Antes as classes eram baseadas em funções (construction functions).</p>
+        <p class="ex"> EX: <br><br>
+            class Product { <br>
+                constructor(name, price) { <br>
+                this.name = name <br>
+                this.price = price <br>   
+            } <br>
+            productWithDiscount(discount) { <br>
+                return this.price * ((100 - discount) / 100) <br>
+            } <br>
+            } <br>
+            const shirt = new Product("Camisa gola V", 20) <br>
+            console.log(shirt.name) <br>
+            console.log(shirt.productWithDiscount(10)) <br>
+            console.log(shirt.productWithDiscount(15)) <br><br>
+            const tenis = new Product("Tenis verde", 120) <br>
+            console.log(tenis.productWithDiscount(20))
+        </p>
+        <h2>Herança de classes</h2>
+        <p>Podemos criar <strong>herança</strong> de clases com ES6 também, utilizando a palavra <strong>extends</strong> para referir a classe herdada, as propriedades que utilizamos dela, devem ser enviadas via função <strong>super.</strong></p>
+        <p class="ex"> EX: <br><br>
+           class productWithAttributes extends Product{ <br>
+                constructor(name, price, colors) { br]
+                super(name, price) <br>
+                this.colors = colors <br>
+            } <br>
+            showColors() { <br>
+                console.log("As cores são:")  br
+                this.colors.forEach((color) => { <br>
+                console.log(color) <br>
+            }) <br>
+            } <br>
+            } <br>
+            const hat = new productWithAttributes("Chapéu", 29.99, [ <br>
+                "Preto", <br>
+                "Azul", <br>
+                "verde" <br>
+            ]) <br>
+            console.log(hat.name) <br>
+            console.log(hat.productWithDiscount(30)) <br>
+            hat.showColors() 
+        </p>
         <p id="finalcontainer">Site criado por <a href="https://github.com/JONATHASROSA" target="_blank">&copy;JonathasRosaDev</a>.</p>
         <script src="script.js"></script>
     </main>

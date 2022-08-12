@@ -87,3 +87,8 @@ p {
     color: black;
     margin: 2px;
 }
+.ex{
+    background-color: rgba(131, 157, 182, 0.603);
+    border-radius: 5px;
+
+}
